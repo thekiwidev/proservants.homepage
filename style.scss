@@ -1,0 +1,127 @@
+@import "./scss/variables";
+@import "./scss/types";
+@import "./scss/utils";
+@import "./scss/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: $theme-black;
+  color: $theme-white;
+
+  header.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      flex: 1;
+
+      img {
+        width: 160px;
+      }
+    }
+
+    .menu {
+      flex: 1;
+
+      .menu-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.4rem;
+
+        padding: 1rem;
+
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+          .stroke {
+            background: $theme-green;
+          }
+        }
+        &.open {
+          .stroke {
+            background: #ff000b;
+
+            &.stroke-one {
+              transform: rotate(45deg) translate(15px, -3px);
+            }
+
+            &.stroke-two {
+              width: 0;
+              //   height: 0;
+            }
+
+            &.stroke-three {
+              transform: rotate(-45deg) translate(15px, 3px);
+            }
+          }
+        }
+        .stroke {
+          background: $theme-white;
+          height: 2px;
+          width: 24px;
+          border-radius: 5rem;
+
+          transition: 0.4s;
+
+          &.stroke-two {
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+  section.hero-banner {
+    @media only screen and (min-width: 850px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+    .hero-banner-image {
+      display: grid;
+      place-content: center;
+
+      img {
+        width: 350px;
+      }
+    }
+    .hero-banner-texts {
+      h1 {
+        margin-bottom: 1.5rem;
+
+        span {
+          color: $theme-orange;
+        }
+      }
+      .cta-btns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn.shop-now {
+          border-radius: 1rem 0.3rem 3rem 1rem;
+          flex: 1.5;
+          text-align: center;
+        }
+        .btn.deliver-now {
+          border-radius: 3rem 0.3rem 3rem 0.3rem;
+        }
+        .btn.sell-now {
+          border-radius: 3rem 1rem 1rem 0.3rem;
+          flex: 1.5;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
