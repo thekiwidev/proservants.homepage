@@ -145,6 +145,8 @@ body {
             box-sizing: border-box;
             width: 49%;
             text-align: center;
+
+            color: $theme-orange;
           }
 
           .btn.deliver-now {
@@ -152,6 +154,12 @@ body {
             box-sizing: border-box;
             width: 49%;
             text-align: center;
+
+            color: $theme-green;
+
+            &:hover {
+              color: $theme-black;
+            }
           }
 
           .btn.sell-now {
@@ -164,8 +172,11 @@ body {
             color: $theme-orange;
 
             &:hover {
-              color: $theme-white;
-              background: none;
+              color: $theme-black;
+            }
+
+            &:hover {
+              color: $theme-black;
             }
           }
         }
