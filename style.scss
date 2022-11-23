@@ -7,6 +7,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -135,7 +137,7 @@ body {
         }
         .cta-btns {
           width: 100%;
-          max-width: 500px;
+          max-width: 400px;
           box-sizing: border-box;
 
           .btn.shop-now {
@@ -144,18 +146,20 @@ body {
             width: 49%;
             text-align: center;
           }
+
           .btn.deliver-now {
             border-radius: 3rem 0.3rem 1rem 0.3rem;
             box-sizing: border-box;
             width: 49%;
             text-align: center;
           }
+
           .btn.sell-now {
             border-radius: 1rem;
             box-sizing: border-box;
-            margin-top: 1rem;
             width: 100%;
             text-align: center;
+            margin-top: 1rem;
           }
         }
       }

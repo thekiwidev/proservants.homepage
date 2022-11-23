@@ -196,6 +196,7 @@ footer {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -301,7 +302,7 @@ body section.hero-banner-section .contents .hero-banner-texts h1 span {
 }
 body section.hero-banner-section .contents .hero-banner-texts .cta-btns {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   box-sizing: border-box;
 }
 body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.shop-now {
@@ -319,9 +320,9 @@ body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.del
 body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sell-now {
   border-radius: 1rem;
   box-sizing: border-box;
-  margin-top: 1rem;
   width: 100%;
   text-align: center;
+  margin-top: 1rem;
 }
 body section.shop-now-section .section-title {
   top: 7%;
