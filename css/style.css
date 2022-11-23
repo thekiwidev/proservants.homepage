@@ -312,6 +312,9 @@ body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sho
   text-align: center;
   color: #ffa42c;
 }
+body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.shop-now:hover {
+  color: #090909;
+}
 body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.deliver-now {
   border-radius: 3rem 0.3rem 1rem 0.3rem;
   box-sizing: border-box;
@@ -329,9 +332,6 @@ body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sel
   text-align: center;
   margin-top: 1rem;
   color: #ffa42c;
-}
-body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sell-now:hover {
-  color: #090909;
 }
 body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sell-now:hover {
   color: #090909;
