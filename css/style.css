@@ -291,8 +291,13 @@ body section.hero-banner-section .contents .hero-banner-image {
   margin-bottom: 1rem;
 }
 body section.hero-banner-section .contents .hero-banner-image img {
-  width: 300px;
-  max-width: 350px;
+  width: 200px;
+}
+@media only screen and (min-width: 850px) {
+  body section.hero-banner-section .contents .hero-banner-image img {
+    width: 300px;
+    max-width: 350px;
+  }
 }
 body section.hero-banner-section .contents .hero-banner-texts h1 {
   margin-bottom: 1.5rem;
