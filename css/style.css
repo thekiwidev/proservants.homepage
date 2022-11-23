@@ -324,9 +324,11 @@ body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sel
   text-align: center;
   margin-top: 1rem;
   color: #ffa42c;
+  border-color: rgba(0, 0, 0, 0);
 }
 body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sell-now:hover {
-  color: #090909;
+  background: none;
+  border-color: #ffa42c;
 }
 body section.shop-now-section .section-title {
   top: 7%;

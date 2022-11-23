@@ -162,9 +162,12 @@ body {
             margin-top: 1rem;
 
             color: $theme-orange;
+            border-color: #00000000;
 
             &:hover {
-              color: $theme-black;
+              // color: $theme-black;
+              background: none;
+              border-color: $theme-orange;
             }
           }
         }
