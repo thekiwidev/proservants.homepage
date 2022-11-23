@@ -30,7 +30,7 @@ body {
     z-index: 90;
 
     background: #000000ba;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 
     .contents {
       display: flex;
@@ -160,6 +160,12 @@ body {
             width: 100%;
             text-align: center;
             margin-top: 1rem;
+
+            color: $theme-orange;
+
+            &:hover {
+              color: $theme-black;
+            }
           }
         }
       }
