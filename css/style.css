@@ -123,7 +123,7 @@ footer {
 
 .btn {
   display: inline-block;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 2rem;
   background: #f5f5f5;
   outline: none;
   border: 0.1rem solid rgba(254, 254, 254, 0);
@@ -216,7 +216,8 @@ body header.main-header {
   left: 0%;
   padding: 1rem;
   z-index: 90;
-  background: rgba(0, 0, 0, 0.7294117647);
+  background: #090909;
+  box-shadow: 3px 0 10px #000;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
 }
@@ -384,6 +385,70 @@ body section.shop-now-section .contents .texts-contents p {
   margin-bottom: 1.5rem;
   max-width: 420px;
 }
+body section.shop-now-extras h1 span {
+  color: #05ddd7;
+}
+body section.shop-now-extras .cards {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+body section.shop-now-extras .cards .card {
+  flex: 1;
+  background: #161616;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: auto;
+  box-shadow: 5px 3px 10px #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body section.shop-now-extras .cards .card .card-header {
+  border-radius: 1rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  overflow: hidden;
+  padding: 0;
+  flex: 0 0 auto;
+}
+body section.shop-now-extras .cards .card .card-header img {
+  width: 100%;
+}
+body section.shop-now-extras .cards .card .card-body-contents {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 30%;
+}
+body section.shop-now-extras .cards .card .card-body-contents h2 {
+  margin-bottom: 1rem;
+}
+body section.shop-now-extras .cards .card .card-body-contents p {
+  margin-bottom: 1rem;
+}
+body section.shop-now-extras .cards .card .card-call-to-action {
+  padding: 0 1.5rem 1rem;
+  flex: 0 auto;
+}
+body section.shop-now-extras .cards .card .card-call-to-action a {
+  display: inline-block;
+  height: 5%;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffa42c;
+}
+body section.shop-now-extras .cards .card .card-call-to-action a:hover {
+  text-decoration: underline;
+}
+body section.shop-now-extras .cards .card.convenience a.ext-link {
+  color: #69afd9;
+}
 body section.sell-now-section .section-title {
   top: 7%;
 }
@@ -435,7 +500,6 @@ body section.deliver-now-section .contents {
 }
 @media only screen and (min-width: 850px) {
   body section.deliver-now-section .contents {
-    display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;

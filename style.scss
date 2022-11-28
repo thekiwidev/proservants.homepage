@@ -29,7 +29,8 @@ body {
 
     z-index: 90;
 
-    background: #000000ba;
+    background: $theme-black;
+    box-shadow: 3px 0 10px #000;
     backdrop-filter: blur(8px);
 
     .contents {
@@ -232,6 +233,93 @@ body {
       }
     }
   }
+  section.shop-now-extras {
+    h1 span {
+      color: $theme-green;
+    }
+    .cards {
+      margin-top: 2rem;
+      display: flex;
+      gap: 3rem;
+
+      .card {
+        flex: 1;
+
+        background: lighten($theme-black, 5);
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-self: auto;
+
+        box-shadow: 5px 3px 10px #000;
+
+        .card-header {
+          border-radius: 1rem;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          overflow: hidden;
+          padding: 0;
+
+          flex: 0 0 auto;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .card-body-contents {
+          padding: 1rem 1.5rem;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          flex: 30%;
+
+          h2 {
+            margin-bottom: 1rem;
+          }
+
+          p {
+            margin-bottom: 1rem;
+          }
+        }
+
+        .card-call-to-action {
+          padding: 0 1.5rem 1rem;
+
+          flex: 0 auto;
+
+          a {
+            display: inline-block;
+            height: 5%;
+
+            text-decoration: none;
+            font-weight: 700;
+            color: $theme-orange;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &.convenience {
+          a.ext-link {
+            color: #69afd9;
+          }
+        }
+      }
+    }
+  }
 
   section.sell-now-section {
     .section-title {
@@ -284,12 +372,13 @@ body {
     }
     .contents {
       @media only screen and (min-width: 850px) {
-        display: flex;
+        // display: flex;
         align-items: center;
         justify-content: center;
         gap: 2rem;
         // flex-direction: row-reverse;
       }
+
       margin-top: 6rem;
       .image-container {
         display: grid;
