@@ -343,6 +343,10 @@ body {
           background: linear-gradient(#00000060, #00000060),
             url(../assets/icons/invoice.png) no-repeat center center/cover;
 
+          a.ext-link {
+            color: #000000;
+          }
+
           @media only screen and(min-width: 850px) {
             background: lighten($theme-black, 5);
           }
@@ -352,6 +356,10 @@ body {
           background: linear-gradient(#00000060, #00000060),
             url(../assets/icons/easy.png) no-repeat center center/cover;
 
+          a.ext-link {
+            color: #000000;
+          }
+
           @media only screen and(min-width: 850px) {
             background: lighten($theme-black, 5);
           }
@@ -360,6 +368,10 @@ body {
         &.supports {
           background: linear-gradient(#00000060, #00000060),
             url(../assets/icons/supports.png) no-repeat center center/cover;
+
+          a.ext-link {
+            color: #000000;
+          }
 
           @media only screen and(min-width: 850px) {
             background: lighten($theme-black, 5);
@@ -444,12 +456,6 @@ body {
             &:hover {
               text-decoration: underline;
             }
-          }
-        }
-
-        &.convenience {
-          a.ext-link {
-            color: #69afd9;
           }
         }
       }

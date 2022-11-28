@@ -469,6 +469,9 @@ body section.sell-now-extras .cards .card {
 body section.sell-now-extras .cards .card.invoice {
   background: linear-gradient(rgba(0, 0, 0, 0.3764705882), rgba(0, 0, 0, 0.3764705882)), url(../assets/icons/invoice.png) no-repeat center center/cover;
 }
+body section.sell-now-extras .cards .card.invoice a.ext-link {
+  color: #000000;
+}
 @media only screen and (min-width: 850px) {
   body section.sell-now-extras .cards .card.invoice {
     background: #161616;
@@ -477,6 +480,9 @@ body section.sell-now-extras .cards .card.invoice {
 body section.sell-now-extras .cards .card.convenience {
   background: linear-gradient(rgba(0, 0, 0, 0.3764705882), rgba(0, 0, 0, 0.3764705882)), url(../assets/icons/easy.png) no-repeat center center/cover;
 }
+body section.sell-now-extras .cards .card.convenience a.ext-link {
+  color: #000000;
+}
 @media only screen and (min-width: 850px) {
   body section.sell-now-extras .cards .card.convenience {
     background: #161616;
@@ -484,6 +490,9 @@ body section.sell-now-extras .cards .card.convenience {
 }
 body section.sell-now-extras .cards .card.supports {
   background: linear-gradient(rgba(0, 0, 0, 0.3764705882), rgba(0, 0, 0, 0.3764705882)), url(../assets/icons/supports.png) no-repeat center center/cover;
+}
+body section.sell-now-extras .cards .card.supports a.ext-link {
+  color: #000000;
 }
 @media only screen and (min-width: 850px) {
   body section.sell-now-extras .cards .card.supports {
@@ -554,9 +563,6 @@ body section.sell-now-extras .cards .card .card-call-to-action a {
 }
 body section.sell-now-extras .cards .card .card-call-to-action a:hover {
   text-decoration: underline;
-}
-body section.sell-now-extras .cards .card.convenience a.ext-link {
-  color: #69afd9;
 }
 body section.deliver-now-section .section-title {
   top: 7%;
