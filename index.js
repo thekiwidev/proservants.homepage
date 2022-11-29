@@ -11,28 +11,53 @@ gsap.registerPlugin(ScrollTrigger);
 let tl = gsap.timeline();
 
 // THE BIG HEADING
-tl.to(".hero-banner-texts h1", {
+gsap.to(".hero-banner-texts h1", {
+  scrollTrigger: {
+    trigger: ".hero-banner-section .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reset restart reverse",
+  },
   "clip-path": " polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%)",
   opacity: 1,
   duration: 1,
-}).delay(1);
+});
 
 // THE BANNER IMAGE
-tl.from(".hero-banner-image img", { x: 200, opacity: 0 }, "-=.76");
+gsap
+  .from(".hero-banner-image img", {
+    scrollTrigger: {
+      trigger: ".hero-banner-section .contents",
+      start: "top 80%",
+      end: "bottom 5%",
+      toggleActions: "restart reset restart reverse",
+    },
+    x: 200,
+    opacity: 0,
+  })
+  .delay(0.5);
 
 // THE HERO CALL TO ACTIONS
-tl.to(
-  ".cta-btns .btn",
+gsap
+  .to(
+    ".cta-btns .btn",
 
-  {
-    y: 0,
-    opacity: 1,
-    duration: 0.6,
-    stagger: 0.1,
-    ease: Linear.easeNone,
-  },
-  "+-=.8"
-);
+    {
+      scrollTrigger: {
+        trigger: ".hero-banner-section .contents",
+        start: "top 80%",
+        end: "bottom 5%",
+        toggleActions: "restart reset restart reverse",
+      },
+
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: Linear.easeNone,
+    }
+  )
+  .delay(0.7);
 
 // Shop now image
 gsap.from(".image-container.shop-now-image-container img", {
