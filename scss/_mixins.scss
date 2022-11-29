@@ -17,3 +17,9 @@
     text-transform: capitalize;
   }
 }
+
+@mixin alignCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

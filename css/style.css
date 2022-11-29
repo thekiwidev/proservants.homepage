@@ -92,24 +92,10 @@ h4 {
   margin: auto;
   padding: 0 1rem;
   position: relative;
-  height: 100vh;
-  overflow-y: scroll;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-}
-
-section,
-footer {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
-  position: relative;
 }
 
 .section-title {
+  display: none;
   position: absolute;
   font-size: 6rem;
   font-weight: 700;
@@ -200,14 +186,33 @@ footer {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   height: 100vh;
   background: #090909;
   color: #f5f5f5;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100vw;
+}
+body #blob_one {
+  position: absolute;
+  z-index: -100;
+  right: -40%;
+  opacity: 0.2;
+}
+body #blob_two {
+  position: absolute;
+  top: 200vh;
+  z-index: -100;
+  left: -40%;
+  opacity: 0.2;
+}
+body #blob_three {
+  position: absolute;
+  top: 380vh;
+  z-index: -100;
+  right: -40%;
+  opacity: 0.2;
 }
 body header.main-header {
   position: fixed;
@@ -216,9 +221,6 @@ body header.main-header {
   left: 0%;
   padding: 1rem;
   z-index: 90;
-  background: #090909;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
 }
 body header.main-header .contents {
   display: flex;
@@ -273,6 +275,13 @@ body header.main-header .menu .menu-burger::before {
 }
 body header.main-header .menu .menu-burger::after {
   transform: translateY(0.6rem);
+}
+body section.hero-banner-section {
+  height: 100vh;
+  max-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body section.hero-banner-section .contents {
   padding: 1rem;
@@ -342,6 +351,9 @@ body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sel
 body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sell-now:hover {
   color: #090909;
 }
+body section.shop-now-section {
+  margin: 8rem 0;
+}
 body section.shop-now-section .section-title {
   top: 7%;
 }
@@ -383,6 +395,9 @@ body section.shop-now-section .contents .texts-contents h1 span {
 body section.shop-now-section .contents .texts-contents p {
   margin-bottom: 1.5rem;
   max-width: 420px;
+}
+body section.sell-now-section {
+  margin: 8rem 0;
 }
 body section.sell-now-section .section-title {
   top: 7%;
@@ -427,6 +442,10 @@ body section.sell-now-section .contents .texts-contents p {
   margin-bottom: 1.5rem;
   max-width: 420px;
 }
+body section.sell-now-extras {
+  margin: 8rem 0;
+  margin-bottom: 16rem;
+}
 body section.sell-now-extras .contents {
   margin-bottom: -4rem;
 }
@@ -443,7 +462,7 @@ body section.sell-now-extras h1 span {
 }
 body section.sell-now-extras .cards {
   display: flex;
-  gap: 0.6rem;
+  gap: 1rem;
   flex-direction: column;
 }
 @media only screen and (min-width: 850px) {
@@ -466,33 +485,24 @@ body section.sell-now-extras .cards .card {
   flex-direction: column;
   justify-content: space-between;
 }
-body section.sell-now-extras .cards .card.invoice {
-  background: linear-gradient(rgba(0, 0, 0, 0.3764705882), rgba(0, 0, 0, 0.3764705882)), url(../assets/icons/invoice.png) no-repeat center center/cover;
-}
 body section.sell-now-extras .cards .card.invoice a.ext-link {
-  color: #000000;
+  color: #69d9ce;
 }
 @media only screen and (min-width: 850px) {
   body section.sell-now-extras .cards .card.invoice {
     background: #161616;
   }
 }
-body section.sell-now-extras .cards .card.convenience {
-  background: linear-gradient(rgba(0, 0, 0, 0.3764705882), rgba(0, 0, 0, 0.3764705882)), url(../assets/icons/easy.png) no-repeat center center/cover;
-}
 body section.sell-now-extras .cards .card.convenience a.ext-link {
-  color: #000000;
+  color: #69afd9;
 }
 @media only screen and (min-width: 850px) {
   body section.sell-now-extras .cards .card.convenience {
     background: #161616;
   }
 }
-body section.sell-now-extras .cards .card.supports {
-  background: linear-gradient(rgba(0, 0, 0, 0.3764705882), rgba(0, 0, 0, 0.3764705882)), url(../assets/icons/supports.png) no-repeat center center/cover;
-}
 body section.sell-now-extras .cards .card.supports a.ext-link {
-  color: #000000;
+  color: #f1ca87;
 }
 @media only screen and (min-width: 850px) {
   body section.sell-now-extras .cards .card.supports {
@@ -511,7 +521,6 @@ body section.sell-now-extras .cards .card .card-header {
   overflow: hidden;
   padding: 0;
   flex: 0 0 auto;
-  display: none;
 }
 @media only screen and (min-width: 850px) {
   body section.sell-now-extras .cards .card .card-header {
@@ -528,11 +537,7 @@ body section.sell-now-extras .cards .card .card-body-contents {
   justify-content: flex-start;
   align-items: flex-start;
   flex: 30%;
-}
-@media only screen and (min-width: 850px) {
-  body section.sell-now-extras .cards .card .card-body-contents {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 1rem;
 }
 body section.sell-now-extras .cards .card .card-body-contents h2 {
   margin-bottom: 1rem;
@@ -567,9 +572,6 @@ body section.sell-now-extras .cards .card .card-call-to-action a:hover {
 body section.deliver-now-section .section-title {
   top: 7%;
 }
-body section.deliver-now-section .contents {
-  margin-top: 6rem;
-}
 @media only screen and (min-width: 850px) {
   body section.deliver-now-section .contents {
     display: flex;
@@ -581,6 +583,7 @@ body section.deliver-now-section .contents {
 body section.deliver-now-section .contents .image-container {
   display: grid;
   place-content: center;
+  position: relative;
   margin-bottom: 2rem;
 }
 @media only screen and (min-width: 850px) {
@@ -591,11 +594,15 @@ body section.deliver-now-section .contents .image-container {
     display: none;
   }
 }
-body section.deliver-now-section .contents .image-container img.lg {
-  display: none;
+body section.deliver-now-section .contents .image-container img.pattern {
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  bottom: -50%;
+  left: 35%;
 }
 body section.deliver-now-section .contents .image-container img {
-  width: 250px;
+  width: 100%;
   border-radius: 1rem;
 }
 @media only screen and (min-width: 850px) {
@@ -617,6 +624,104 @@ body section.deliver-now-section .contents .texts-contents h1 span {
 body section.deliver-now-section .contents .texts-contents p {
   margin-bottom: 1.5rem;
   max-width: 420px;
+}
+body section.more-info-section {
+  margin: 8rem 0;
+}
+body section.more-info-section .contents header.more-info-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+body section.more-info-section .contents header.more-info-header .texts h2 {
+  flex: 1;
+  font-size: 2.9rem;
+}
+body section.more-info-section .contents header.more-info-header .texts p {
+  color: #ffa42c;
+  font-style: italic;
+}
+body section.more-info-section .contents header.more-info-header .form-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+body section.more-info-section .contents header.more-info-header .form-field input {
+  outline: none;
+  background: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  width: 400px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+}
+body section.more-info-section .contents header.more-info-header .form-field input:focus {
+  border-color: #ffa42c;
+}
+body section.more-info-section .contents header.more-info-header .form-field button {
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  background: #ffa42c;
+  color: #090909;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: 1px solid #ffa42c;
+  transition: 0.3s;
+}
+body section.more-info-section .contents header.more-info-header .form-field button:hover {
+  background: none;
+  color: #f5f5f5;
+}
+body section.more-info-section .contents main.stats .stats-contents {
+  display: flex;
+  gap: 1rem;
+}
+body section.more-info-section .contents main.stats .stats-contents .stat {
+  flex: 1;
+  padding: 1rem;
+  position: relative;
+}
+body section.more-info-section .contents main.stats .stats-contents .stat:hover::before {
+  width: 0.8rem;
+  height: 0.8rem;
+  left: -6%;
+}
+body section.more-info-section .contents main.stats .stats-contents .stat::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: #ffa42c;
+  position: absolute;
+  left: -5%;
+  top: 10%;
+  transition: 0.3s;
+}
+body section.more-info-section .contents main.stats .stats-contents .stat::after {
+  content: "";
+  width: 1px;
+  height: 65%;
+  background: #05ddd7;
+  position: absolute;
+  left: -3.5%;
+  top: 25%;
+}
+body section.more-info-section .contents main.stats .stats-contents .stat .contents .stat-header {
+  margin-bottom: 2rem;
+}
+body section.more-info-section .contents main.stats .stats-contents .stat .contents p {
+  margin-bottom: 1rem;
+}
+body section.marketplace-section {
+  margin: 8rem 0;
 }
 body section.marketplace-section .section-title {
   top: 7%;
@@ -673,5 +778,9 @@ body section.marketplace-section .contents .texts-contents p {
   max-width: 420px;
 }
 body footer.main-footer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
