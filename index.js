@@ -7,28 +7,21 @@ document.querySelector(".menu").addEventListener("click", () => {
 let tl = gsap.timeline({ default: { ease: "power4.inOut", duration: 2 } });
 
 // THE BIG HEADING
-tl.fromTo(
-  ".hero-banner-texts h1",
-  {
-    "clip-path": " polygon(0% 100%, 0% 100%, 0% 0%, 0% 0%)",
-    opacity: 0.1,
-  },
+tl.to(".hero-banner-texts h1", {
+  "clip-path": " polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%)",
+  opacity: 1,
+  duration: 1,
+});
+tl.from(".hero-banner-image img", { x: 200, opacity: 0 }, "-=.76");
+tl.to(
+  ".cta-btns .btn",
 
   {
-    "clip-path": " polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%)",
+    y: 0,
     opacity: 1,
-    duration: 1,
-  }
-);
-tl.from(".hero-banner-image img", { x: 200, opacity: 0 }, "-=.76");
-tl.fromTo(
-  ".cta-btns .btn",
-  {
-    opacity: 0,
-    y: 200,
+    stagger: 0.1,
   },
-  { y: 0, opacity: 1, stagger: 0.1 },
-  "+-=.7"
+  "+-=.3"
 );
 
 // gsap.fromTo(".box", { opacity: 0 }, { opacity: 0.5, duration: 1 });
