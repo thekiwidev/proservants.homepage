@@ -32,24 +32,36 @@ body {
   #blob_one {
     position: absolute;
     z-index: -100;
-    right: -40%;
     opacity: 0.2;
+    right: -270%;
+
+    @media only screen and (min-width: 850px) {
+      right: -40%;
+    }
   }
 
   #blob_two {
     position: absolute;
     top: 200vh;
     z-index: -100;
-    left: -40%;
+    left: -250%;
     opacity: 0.2;
+
+    @media only screen and (min-width: 850px) {
+      left: -40%;
+    }
   }
 
   #blob_three {
     position: absolute;
     top: 380vh;
     z-index: -100;
-    right: -40%;
+    right: -250%;
     opacity: 0.2;
+
+    @media only screen and (min-width: 850px) {
+      right: -40%;
+    }
   }
 
   // ========================================
@@ -57,10 +69,6 @@ body {
   // ========================================
 
   header.main-header {
-    position: fixed;
-    width: 100%;
-    top: 0%;
-    left: 0%;
     padding: 1rem;
 
     z-index: 90;
@@ -675,9 +683,15 @@ body {
 
             &:hover {
               &::before {
-                width: 0.8rem;
-                height: 0.8rem;
+                width: 1rem;
+                height: 1rem;
                 left: -6%;
+              }
+
+              &::after {
+                width: 3px;
+                left: -4%;
+                background: $theme-orange;
               }
             }
 
@@ -706,6 +720,9 @@ body {
               position: absolute;
               left: -3.5%;
               top: 25%;
+
+              border-radius: 4rem;
+              transition: 0.3s;
             }
 
             .contents {

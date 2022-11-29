@@ -197,28 +197,39 @@ body {
 body #blob_one {
   position: absolute;
   z-index: -100;
-  right: -40%;
   opacity: 0.2;
+  right: -270%;
+}
+@media only screen and (min-width: 850px) {
+  body #blob_one {
+    right: -40%;
+  }
 }
 body #blob_two {
   position: absolute;
   top: 200vh;
   z-index: -100;
-  left: -40%;
+  left: -250%;
   opacity: 0.2;
+}
+@media only screen and (min-width: 850px) {
+  body #blob_two {
+    left: -40%;
+  }
 }
 body #blob_three {
   position: absolute;
   top: 380vh;
   z-index: -100;
-  right: -40%;
+  right: -250%;
   opacity: 0.2;
 }
+@media only screen and (min-width: 850px) {
+  body #blob_three {
+    right: -40%;
+  }
+}
 body header.main-header {
-  position: fixed;
-  width: 100%;
-  top: 0%;
-  left: 0%;
   padding: 1rem;
   z-index: 90;
 }
@@ -712,9 +723,14 @@ body section.more-info-section .contents main.stats .stats-contents .stat {
   position: relative;
 }
 body section.more-info-section .contents main.stats .stats-contents .stat:hover::before {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 1rem;
+  height: 1rem;
   left: -6%;
+}
+body section.more-info-section .contents main.stats .stats-contents .stat:hover::after {
+  width: 3px;
+  left: -4%;
+  background: #ffa42c;
 }
 body section.more-info-section .contents main.stats .stats-contents .stat::before {
   content: "";
@@ -735,6 +751,8 @@ body section.more-info-section .contents main.stats .stats-contents .stat::after
   position: absolute;
   left: -3.5%;
   top: 25%;
+  border-radius: 4rem;
+  transition: 0.3s;
 }
 body section.more-info-section .contents main.stats .stats-contents .stat .contents .stat-header {
   margin-bottom: 2rem;
