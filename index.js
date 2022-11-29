@@ -55,7 +55,7 @@ gsap.from(".shop-now-text-contents h1", {
     // markers: true,
   },
 
-  y: 100,
+  x: 100,
   opacity: 0,
   duration: 0.8,
 });
@@ -69,7 +69,7 @@ gsap.from(".shop-now-text-contents p", {
     // markers: true,
   },
 
-  y: 100,
+  x: 100,
   opacity: 0,
   duration: 0.8,
 });
@@ -84,7 +84,7 @@ gsap.from(".shop-now-text-contents a.btn", {
   },
 
   // "clip-path": "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-  // y: 100,
+  x: 100,
   opacity: 0,
   duration: 0.5,
 });
