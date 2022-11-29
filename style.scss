@@ -582,6 +582,11 @@ body {
         align-items: flex-end;
         justify-content: center;
         gap: 3rem;
+        flex-direction: column;
+
+        @media only screen and (min-width: 850px) {
+          flex-direction: row;
+        }
 
         margin-bottom: 4rem;
         .texts {
@@ -648,9 +653,17 @@ body {
       }
 
       main.stats {
+        width: 95%;
+        margin: auto;
+
         .stats-contents {
           display: flex;
           gap: 1rem;
+          flex-direction: column;
+
+          @media only screen and (min-width: 850px) {
+            flex-direction: row;
+          }
           // align-items: flex-start;
 
           .stat {
