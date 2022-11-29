@@ -11,7 +11,7 @@ tl.to(".hero-banner-texts h1", {
   "clip-path": " polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%)",
   opacity: 1,
   duration: 1,
-});
+}).delay(1);
 tl.from(".hero-banner-image img", { x: 200, opacity: 0 }, "-=.76");
 tl.to(
   ".cta-btns .btn",
