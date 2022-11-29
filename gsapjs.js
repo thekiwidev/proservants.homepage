@@ -39,7 +39,7 @@ gsap.from(".image-container.shop-now-image-container img", {
   scrollTrigger: {
     trigger: "#shop .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reset restart reverse",
   },
   y: 100,
@@ -53,7 +53,7 @@ gsap.from(".shop-now-text-contents h1", {
   scrollTrigger: {
     trigger: "#shop .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
   },
 
@@ -67,7 +67,7 @@ gsap.from(".shop-now-text-contents p", {
   scrollTrigger: {
     trigger: "#shop .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
   },
 
@@ -80,7 +80,7 @@ gsap.from(".shop-now-text-contents a.btn", {
   scrollTrigger: {
     trigger: "#shop .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
   },
 
@@ -95,7 +95,7 @@ gsap.from(".image-container.sell-now-image-container img", {
   scrollTrigger: {
     trigger: "#sell .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reset restart reverse",
   },
   x: 100,
@@ -108,7 +108,7 @@ gsap.from(".sell-now-text-contents h1", {
   scrollTrigger: {
     trigger: "#sell .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
   },
 
@@ -122,7 +122,7 @@ gsap.from(".sell-now-text-contents p", {
   scrollTrigger: {
     trigger: "#sell .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
   },
 
@@ -136,7 +136,7 @@ gsap.from(".sell-now-text-contents a.btn", {
   scrollTrigger: {
     trigger: "#sell .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
   },
 
@@ -146,49 +146,14 @@ gsap.from(".sell-now-text-contents a.btn", {
 });
 
 // sell now extra header
-// gsap.fromTo(
-//   ".sell-now-extras h1",
-//   {
-//     scrollTrigger: {
-//       trigger: ".sell-now-extras .contents",
-//       start: "top 80%",
-//       end: "bottom 5%",
-//       toggleActions: "restart reverse restart reverse",
-//     },
-//     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-//     opacity: 0,
-//     duration: 0.8,
-//   },
-//   {
-//     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-//     opacity: 1,
-//   }
-// );
-
-gsap.from(".sell-now-extras .cards .card", {
+gsap.fromTo(".sell-now-extras h1", {
   scrollTrigger: {
-    trigger: ".sell-now-extras .contents",
+    trigger: "#sell .contents",
     start: "top 80%",
-    end: "bottom 5%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
   },
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  stagger: 0.3,
-});
-
-gsap.from(".more-info-section .stats .stat", {
-  scrollTrigger: {
-    trigger: ".more-info-section .contents .stats",
-    start: "top 80%",
-    end: "bottom 5%",
-    toggleActions: "restart reverse restart reverse",
-  },
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  stagger: 0.3,
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
 });
 
 // toggleActions: "play none none none",

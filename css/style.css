@@ -94,10 +94,6 @@ h4 {
   position: relative;
 }
 
-section {
-  height: 100vh;
-}
-
 .section-title {
   display: none;
   position: absolute;
@@ -292,8 +288,7 @@ body header.main-header .menu .menu-burger::after {
   transform: translateY(0.6rem);
 }
 body section.hero-banner-section {
-  height: 100vh;
-  max-height: 700px;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -372,6 +367,9 @@ body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sel
 body section.hero-banner-section .contents .hero-banner-texts .cta-btns .btn.sell-now:hover {
   color: #090909;
 }
+body section.shop-now-section {
+  margin: 10rem 0;
+}
 body section.shop-now-section .section-title {
   top: 7%;
 }
@@ -413,6 +411,9 @@ body section.shop-now-section .contents .texts-contents h1 span {
 body section.shop-now-section .contents .texts-contents p {
   margin-bottom: 1.5rem;
   max-width: 420px;
+}
+body section.sell-now-section {
+  margin: 10rem 0;
 }
 body section.sell-now-section .section-title {
   top: 7%;
@@ -457,6 +458,10 @@ body section.sell-now-section .contents .texts-contents p {
   margin-bottom: 1.5rem;
   max-width: 420px;
 }
+body section.sell-now-extras {
+  margin: 10rem 0;
+  margin-bottom: 16rem;
+}
 body section.sell-now-extras .contents {
   margin-bottom: -4rem;
 }
@@ -465,7 +470,7 @@ body section.sell-now-extras h1 {
 }
 @media only screen and (min-width: 390px) {
   body section.sell-now-extras h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 }
 body section.sell-now-extras h1 span {
@@ -580,6 +585,9 @@ body section.sell-now-extras .cards .card .card-call-to-action a {
 body section.sell-now-extras .cards .card .card-call-to-action a:hover {
   text-decoration: underline;
 }
+body section.deliver-now-section {
+  margin: 10rem 0;
+}
 body section.deliver-now-section .section-title {
   top: 7%;
 }
@@ -596,14 +604,6 @@ body section.deliver-now-section .contents .image-container {
   place-content: center;
   position: relative;
   margin-bottom: 2rem;
-}
-@media only screen and (min-width: 850px) {
-  body section.deliver-now-section .contents .image-container img.lg {
-    display: block;
-  }
-  body section.deliver-now-section .contents .image-container img.sm {
-    display: none;
-  }
 }
 body section.deliver-now-section .contents .image-container img.pattern {
   position: absolute;
@@ -637,7 +637,7 @@ body section.deliver-now-section .contents .texts-contents p {
   max-width: 420px;
 }
 body section.more-info-section {
-  margin: 8rem 0;
+  margin: 10rem 0;
 }
 body section.more-info-section .contents header.more-info-header {
   display: flex;

@@ -154,8 +154,8 @@ body {
   // ========================================
 
   section.hero-banner-section {
-    height: 100vh;
-    max-height: 700px;
+    height: 90vh;
+    // max-height: 700px;
 
     @include alignCenter;
 
@@ -255,7 +255,7 @@ body {
   // ========================================
 
   section.shop-now-section {
-    // margin: 8rem 0;
+    margin: 10rem 0;
 
     .section-title {
       top: 7%;
@@ -314,7 +314,7 @@ body {
   // ========================================
 
   section.sell-now-section {
-    // margin: 8rem 0;
+    margin: 10rem 0;
 
     .section-title {
       top: 7%;
@@ -366,8 +366,8 @@ body {
   // ========================================
 
   section.sell-now-extras {
-    // margin: 8rem 0;
-    // margin-bottom: 16rem;
+    margin: 10rem 0;
+    margin-bottom: 16rem;
 
     .contents {
       margin-bottom: -4rem;
@@ -377,7 +377,7 @@ body {
       margin-bottom: 1rem;
 
       @media only screen and(min-width: 390px) {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
       }
 
       span {
@@ -520,6 +520,8 @@ body {
   // ========================================
 
   section.deliver-now-section {
+    margin: 10rem 0;
+
     .section-title {
       top: 7%;
     }
@@ -538,15 +540,6 @@ body {
         position: relative;
 
         margin-bottom: 2rem;
-
-        @media only screen and (min-width: 850px) {
-          img.lg {
-            display: block;
-          }
-          img.sm {
-            display: none;
-          }
-        }
 
         img.pattern {
           position: absolute;
@@ -590,7 +583,7 @@ body {
   // ========================================
 
   section.more-info-section {
-    margin: 8rem 0;
+    margin: 10rem 0;
 
     .contents {
       header.more-info-header {
