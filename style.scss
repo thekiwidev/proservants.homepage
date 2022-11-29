@@ -274,6 +274,9 @@ body {
 
         margin-bottom: 2rem;
 
+        // transform: translateY(100px);
+        // opacity: 0;
+
         img {
           width: 250px;
 
@@ -286,6 +289,7 @@ body {
       .texts-contents {
         h1 {
           width: 300px;
+
           span {
             color: $theme-orange;
           }
@@ -297,6 +301,10 @@ body {
           margin-bottom: 1.5rem;
           max-width: 420px;
         }
+
+        // a.btn {
+        //   clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+        // }
       }
     }
   }
@@ -592,12 +600,16 @@ body {
         gap: 3rem;
         flex-direction: column;
 
+        padding: 1rem;
+
         @media only screen and (min-width: 850px) {
           flex-direction: row;
         }
 
         margin-bottom: 4rem;
         .texts {
+          flex: 1;
+
           h2 {
             flex: 1;
             font-size: 2.9rem;
@@ -610,25 +622,37 @@ body {
         }
 
         .form-field {
-          flex: 1;
+          width: 100%;
 
           display: flex;
           align-items: center;
           justify-content: center;
           gap: 0.5rem;
 
+          flex-direction: column;
+
+          @media only screen and (min-width: 850px) {
+            flex-direction: row;
+
+            flex: 1;
+          }
+
           input {
             outline: none;
             background: $theme-white;
             border: 1px solid $theme-white;
-
-            width: 400px;
 
             padding: 0.8rem 1rem;
             font-size: 1rem;
             border-radius: 0.3rem;
 
             transition: 0.3s;
+
+            width: 100%;
+
+            @media only screen and (min-width: 850px) {
+              width: 400px;
+            }
 
             &:focus {
               border-color: $theme-orange;
@@ -651,6 +675,12 @@ body {
             border: 1px solid $theme-orange;
 
             transition: 0.3s;
+
+            width: 100%;
+
+            @media only screen and (min-width: 850px) {
+              width: 100px;
+            }
 
             &:hover {
               background: none;
