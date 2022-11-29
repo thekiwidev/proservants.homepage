@@ -34,9 +34,9 @@ tl.to(
 // Shop now image
 gsap.from(".image-container.shop-now-image-container img", {
   scrollTrigger: {
-    trigger: "#shop",
-    start: "top 75%",
-    end: "bottom 10%",
+    trigger: "#shop .contents",
+    start: "top 80%",
+    end: "bottom 20%",
     toggleActions: "restart reset restart reverse",
     // markers: true,
   },
@@ -48,9 +48,9 @@ gsap.from(".image-container.shop-now-image-container img", {
 // Shop now text contents
 gsap.from(".shop-now-text-contents h1", {
   scrollTrigger: {
-    trigger: "#shop",
+    trigger: "#shop .contents",
     start: "top 80%",
-    end: "bottom 10%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
     // markers: true,
   },
@@ -62,9 +62,9 @@ gsap.from(".shop-now-text-contents h1", {
 
 gsap.from(".shop-now-text-contents p", {
   scrollTrigger: {
-    trigger: "#shop",
+    trigger: "#shop .contents",
     start: "top 80%",
-    end: "bottom 10%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
     // markers: true,
   },
@@ -76,9 +76,9 @@ gsap.from(".shop-now-text-contents p", {
 
 gsap.from(".shop-now-text-contents a.btn", {
   scrollTrigger: {
-    trigger: "#shop",
+    trigger: "#shop .contents",
     start: "top 80%",
-    end: "bottom 10%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
     // markers: true,
   },
@@ -92,8 +92,8 @@ gsap.from(".shop-now-text-contents a.btn", {
 // Sell now image
 gsap.from(".image-container.sell-now-image-container img", {
   scrollTrigger: {
-    trigger: "#sell",
-    start: "top 75%",
+    trigger: "#sell .contents",
+    start: "top 80%",
     end: "bottom 20%",
     toggleActions: "restart reset restart reverse",
     // markers: true,
@@ -106,7 +106,7 @@ gsap.from(".image-container.sell-now-image-container img", {
 // sell now text contents
 gsap.from(".sell-now-text-contents h1", {
   scrollTrigger: {
-    trigger: "#sell",
+    trigger: "#sell .contents",
     start: "top 80%",
     end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
@@ -120,7 +120,7 @@ gsap.from(".sell-now-text-contents h1", {
 
 gsap.from(".sell-now-text-contents p", {
   scrollTrigger: {
-    trigger: "#sell",
+    trigger: "#sell .contents",
     start: "top 80%",
     end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
@@ -135,9 +135,9 @@ gsap.from(".sell-now-text-contents p", {
 
 gsap.from(".sell-now-text-contents a.btn", {
   scrollTrigger: {
-    trigger: "#sell",
+    trigger: "#sell .contents",
     start: "top 80%",
-    end: "bottom 10%",
+    end: "bottom 20%",
     toggleActions: "restart reverse restart reverse",
     // markers: true,
   },
