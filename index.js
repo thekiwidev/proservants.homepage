@@ -20,8 +20,12 @@ gsap.to(".hero-banner-texts h1", {
   },
   "clip-path": " polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%)",
   opacity: 1,
-  duration: 1,
+  duration: 2.5,
 });
+
+// ========================================
+// the banner
+// ========================================
 
 // THE BANNER IMAGE
 gsap
@@ -34,6 +38,7 @@ gsap
     },
     x: 200,
     opacity: 0,
+    duration: 1,
   })
   .delay(0.5);
 
@@ -52,12 +57,16 @@ gsap
 
       y: 0,
       opacity: 1,
-      duration: 0.6,
+      duration: 1,
       stagger: 0.1,
       ease: Linear.easeNone,
     }
   )
   .delay(0.7);
+
+// ========================================
+// shop now
+// ========================================
 
 // Shop now image
 gsap.from(".image-container.shop-now-image-container img", {
@@ -115,6 +124,10 @@ gsap.from(".shop-now-text-contents a.btn", {
   duration: 0.5,
 });
 
+// ========================================
+// sell now
+// ========================================
+
 // Sell now image
 gsap.from(".image-container.sell-now-image-container img", {
   scrollTrigger: {
@@ -153,7 +166,7 @@ gsap.from(".sell-now-text-contents p", {
 
   x: -100,
   opacity: 0,
-  duration: 0.8,
+  duration: 1,
   delay: 0.3,
 });
 
@@ -167,28 +180,25 @@ gsap.from(".sell-now-text-contents a.btn", {
 
   x: -100,
   opacity: 0,
-  duration: 0.8,
+  duration: 1,
 });
 
+// ========================================
+// sell now extra
+// ========================================
+
 // sell now extra header
-// gsap.fromTo(
-//   ".sell-now-extras h1",
-//   {
-//     scrollTrigger: {
-//       trigger: ".sell-now-extras .contents",
-//       start: "top 80%",
-//       end: "bottom 5%",
-//       toggleActions: "restart reverse restart reverse",
-//     },
-//     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-//     opacity: 0,
-//     duration: 0.8,
-//   },
-//   {
-//     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-//     opacity: 1,
-//   }
-// );
+gsap.from(".sell-now-extras h1", {
+  scrollTrigger: {
+    trigger: ".sell-now-extras .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+  "clip-path": "polygon(0% 0%, 0% 18%, 0% 61%, 0% 100%)",
+  opacity: 0,
+  duration: 1.3,
+});
 
 gsap.from(".sell-now-extras .cards .card", {
   scrollTrigger: {
@@ -199,6 +209,103 @@ gsap.from(".sell-now-extras .cards .card", {
   },
   y: 100,
   opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+});
+
+// ========================================
+// DELIVER NOW
+// ========================================
+
+gsap.from(".image-container.deliver-now-image-container img", {
+  scrollTrigger: {
+    trigger: "#deliver .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reset restart reverse",
+  },
+  scale: 1.3,
+  opacity: 0,
+  duration: 0.4,
+  stagger: 0.4,
+});
+
+gsap.from(".deliver-now-text-contents h1", {
+  scrollTrigger: {
+    trigger: "#deliver .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+
+  y: 100,
+
+  opacity: 0,
+  duration: 0.8,
+});
+
+gsap.from(".deliver-now-text-contents p", {
+  scrollTrigger: {
+    trigger: "#deliver .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+
+  y: 100,
+  opacity: 0,
+  duration: 0.8,
+});
+
+gsap.from(".deliver-now-text-contents a.btn", {
+  scrollTrigger: {
+    trigger: "#deliver .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+
+  y: 100,
+
+  opacity: 0,
+  duration: 0.5,
+});
+
+// ========================================
+// more info
+// ========================================
+
+let headTargets = [
+  document.querySelector(".more-info-header .texts"),
+  document.querySelector(".more-info-header .form-field"),
+];
+let headTargetsTexts = [
+  document.querySelector(".more-info-header .texts h2"),
+  document.querySelector(".more-info-header .texts p"),
+];
+
+gsap.from(headTargets, {
+  scrollTrigger: {
+    trigger: ".more-info-section .contents .more-info-header",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+  y: 100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+});
+
+gsap.from(headTargetsTexts, {
+  scrollTrigger: {
+    trigger: ".more-info-section .contents .more-info-header",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+
+  "clip-path": "polygon(100% 100%, 100% 100%, 0% 100%, 0% 100%)",
   duration: 1,
   stagger: 0.3,
 });

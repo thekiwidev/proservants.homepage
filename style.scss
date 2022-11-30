@@ -375,6 +375,7 @@ body {
 
     h1 {
       margin-bottom: 1rem;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
       @media only screen and(min-width: 390px) {
         margin-bottom: 4rem;
@@ -606,11 +607,13 @@ body {
           h2 {
             flex: 1;
             font-size: 2.9rem;
+            clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
           }
 
           p {
             color: $theme-orange;
             font-style: italic;
+            clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
           }
         }
 
@@ -695,7 +698,8 @@ body {
           @media only screen and (min-width: 850px) {
             flex-direction: row;
           }
-          // align-items: flex-start;
+
+          align-items: flex-start;
 
           .stat {
             flex: 1;
