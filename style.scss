@@ -1016,6 +1016,8 @@ body {
           img {
             width: 32px;
 
+            transition: 0.3s;
+
             &:hover {
               transform: scale(1.1);
             }

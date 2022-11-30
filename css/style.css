@@ -942,6 +942,7 @@ body footer.main-footer .contents .company .social-links {
 }
 body footer.main-footer .contents .company .social-links img {
   width: 32px;
+  transition: 0.3s;
 }
 body footer.main-footer .contents .company .social-links img:hover {
   transform: scale(1.1);
