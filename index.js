@@ -77,10 +77,9 @@ gsap.from(".image-container.shop-now-image-container img", {
     end: "bottom 5%",
     toggleActions: "restart reset restart reverse",
   },
-  y: 100,
-  x: -100,
+  scale: 1.5,
   opacity: 0,
-  duration: 0.8,
+  duration: 1,
 });
 
 // Shop now text contents
@@ -137,7 +136,7 @@ gsap.from(".image-container.sell-now-image-container img", {
     end: "bottom 5%",
     toggleActions: "restart reset restart reverse",
   },
-  x: 100,
+  scale: 0.6,
   opacity: 0,
   duration: 0.8,
 });
@@ -188,31 +187,31 @@ gsap.from(".sell-now-text-contents a.btn", {
 // sell now extra
 // ========================================
 
-// sell now extra header
-gsap.from(".sell-now-extras h1", {
-  scrollTrigger: {
-    trigger: ".sell-now-extras .contents",
-    start: "top 80%",
-    end: "bottom 5%",
-    toggleActions: "restart reverse restart reverse",
-  },
-  "clip-path": "polygon(0% 0%, 0% 18%, 0% 61%, 0% 100%)",
-  opacity: 0,
-  duration: 1.3,
-});
+// // sell now extra header
+// gsap.from(".sell-now-extras h1", {
+//   scrollTrigger: {
+//     trigger: ".sell-now-extras .contents",
+//     start: "top 80%",
+//     end: "bottom 5%",
+//     toggleActions: "restart reverse restart reverse",
+//   },
+//   "clip-path": "polygon(0% 0%, 0% 18%, 0% 61%, 0% 100%)",
+//   opacity: 0,
+//   duration: 1.3,
+// });
 
-gsap.from(".sell-now-extras .cards .card", {
-  scrollTrigger: {
-    trigger: ".sell-now-extras .contents",
-    start: "top 80%",
-    end: "bottom 5%",
-    toggleActions: "restart reverse restart reverse",
-  },
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  stagger: 0.3,
-});
+// gsap.from(".sell-now-extras .cards .card", {
+//   scrollTrigger: {
+//     trigger: ".sell-now-extras .contents",
+//     start: "top 80%",
+//     end: "bottom 5%",
+//     toggleActions: "restart reverse restart reverse",
+//   },
+//   y: 100,
+//   opacity: 0,
+//   duration: 1,
+//   stagger: 0.3,
+// });
 
 // ========================================
 // DELIVER NOW
