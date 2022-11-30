@@ -54,7 +54,7 @@ body {
 
   #blob_three {
     position: absolute;
-    top: 380vh;
+    top: 360vh;
     z-index: -100;
     right: -250%;
     opacity: 0.2;
@@ -845,12 +845,140 @@ body {
   }
 
   footer.main-footer {
-    height: 50vh;
-    @include alignCenter;
-    flex-direction: column;
+    background: $theme-black;
 
-    p {
-      color: $theme-green;
+    .contents {
+      padding: 5rem 1rem;
+
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+
+      flex-direction: column;
+
+      @media only screen and (min-width: 850px) {
+        flex-direction: row;
+        gap: 6rem;
+      }
+
+      .company {
+        flex: 1.5;
+
+        .logo {
+          margin-bottom: 1rem;
+        }
+
+        .newsletter {
+          margin: 2rem 0;
+          width: 100%;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+
+          flex-direction: column;
+
+          @media only screen and (min-width: 850px) {
+            flex-direction: row;
+
+            flex: 1;
+          }
+
+          input {
+            outline: none;
+            background: $theme-white;
+            border: 1px solid $theme-white;
+
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            border-radius: 0.3rem;
+
+            transition: 0.3s;
+
+            width: 100%;
+
+            &:focus {
+              border-color: $theme-orange;
+            }
+          }
+
+          button {
+            border-radius: 0.3rem;
+            outline: none;
+            border: none;
+            background: $theme-orange;
+            color: $theme-black;
+            padding: 0.8rem 1rem;
+
+            font-size: 1rem;
+            text-transform: capitalize;
+
+            cursor: pointer;
+
+            border: 1px solid $theme-orange;
+
+            transition: 0.3s;
+
+            width: 100%;
+
+            @media only screen and (min-width: 850px) {
+              width: 200px;
+            }
+
+            &:hover {
+              background: none;
+              color: $theme-white;
+            }
+          }
+        }
+      }
+
+      .quik-links {
+        flex: 1;
+
+        .header {
+          padding: 1rem;
+        }
+
+        ul {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: $theme-white;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+
+            &:hover {
+              text-decoration: underline $theme-orange;
+            }
+          }
+        }
+      }
+
+      .accounts {
+        flex: 1;
+
+        .header {
+          padding: 1rem;
+        }
+
+        ul {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: $theme-white;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+
+            &:hover {
+              text-decoration: underline $theme-orange;
+            }
+          }
+        }
+      }
     }
   }
 }

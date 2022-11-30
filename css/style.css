@@ -219,7 +219,7 @@ body #blob_two {
 }
 body #blob_three {
   position: absolute;
-  top: 380vh;
+  top: 360vh;
   z-index: -100;
   right: -250%;
   opacity: 0.2;
@@ -849,12 +849,113 @@ body section.marketplace-section .contents .texts-contents p {
   max-width: 420px;
 }
 body footer.main-footer {
-  height: 50vh;
+  background: #090909;
+}
+body footer.main-footer .contents {
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+@media only screen and (min-width: 850px) {
+  body footer.main-footer .contents {
+    flex-direction: row;
+    gap: 6rem;
+  }
+}
+body footer.main-footer .contents .company {
+  flex: 1.5;
+}
+body footer.main-footer .contents .company .logo {
+  margin-bottom: 1rem;
+}
+body footer.main-footer .contents .company .newsletter {
+  margin: 2rem 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   flex-direction: column;
 }
-body footer.main-footer p {
-  color: #05ddd7;
+@media only screen and (min-width: 850px) {
+  body footer.main-footer .contents .company .newsletter {
+    flex-direction: row;
+    flex: 1;
+  }
+}
+body footer.main-footer .contents .company .newsletter input {
+  outline: none;
+  background: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+  width: 100%;
+}
+body footer.main-footer .contents .company .newsletter input:focus {
+  border-color: #ffa42c;
+}
+body footer.main-footer .contents .company .newsletter button {
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  background: #ffa42c;
+  color: #090909;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: 1px solid #ffa42c;
+  transition: 0.3s;
+  width: 100%;
+}
+@media only screen and (min-width: 850px) {
+  body footer.main-footer .contents .company .newsletter button {
+    width: 200px;
+  }
+}
+body footer.main-footer .contents .company .newsletter button:hover {
+  background: none;
+  color: #f5f5f5;
+}
+body footer.main-footer .contents .quik-links {
+  flex: 1;
+}
+body footer.main-footer .contents .quik-links .header {
+  padding: 1rem;
+}
+body footer.main-footer .contents .quik-links ul {
+  list-style: none;
+}
+body footer.main-footer .contents .quik-links ul a {
+  text-decoration: none;
+  color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+body footer.main-footer .contents .quik-links ul a:hover {
+  -webkit-text-decoration: underline #ffa42c;
+          text-decoration: underline #ffa42c;
+}
+body footer.main-footer .contents .accounts {
+  flex: 1;
+}
+body footer.main-footer .contents .accounts .header {
+  padding: 1rem;
+}
+body footer.main-footer .contents .accounts ul {
+  list-style: none;
+}
+body footer.main-footer .contents .accounts ul a {
+  text-decoration: none;
+  color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+body footer.main-footer .contents .accounts ul a:hover {
+  -webkit-text-decoration: underline #ffa42c;
+          text-decoration: underline #ffa42c;
 }/*# sourceMappingURL=style.css.map */
