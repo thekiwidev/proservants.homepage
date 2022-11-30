@@ -935,8 +935,19 @@ body footer.main-footer .contents .company {
 body footer.main-footer .contents .company .logo {
   margin-bottom: 1rem;
 }
-body footer.main-footer .contents .company .newsletter {
-  margin: 2rem 0;
+body footer.main-footer .contents .company .social-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+body footer.main-footer .contents .company .social-links img {
+  width: 32px;
+}
+body footer.main-footer .contents .company .social-links img:hover {
+  transform: scale(1.1);
+}
+body footer.main-footer .contents .company .newsletter .form-field {
+  margin: 1rem 0 2rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -945,12 +956,12 @@ body footer.main-footer .contents .company .newsletter {
   flex-direction: column;
 }
 @media only screen and (min-width: 850px) {
-  body footer.main-footer .contents .company .newsletter {
+  body footer.main-footer .contents .company .newsletter .form-field {
     flex-direction: row;
     flex: 1;
   }
 }
-body footer.main-footer .contents .company .newsletter input {
+body footer.main-footer .contents .company .newsletter .form-field input {
   outline: none;
   background: #f5f5f5;
   border: 1px solid #f5f5f5;
@@ -960,10 +971,10 @@ body footer.main-footer .contents .company .newsletter input {
   transition: 0.3s;
   width: 100%;
 }
-body footer.main-footer .contents .company .newsletter input:focus {
+body footer.main-footer .contents .company .newsletter .form-field input:focus {
   border-color: #ffa42c;
 }
-body footer.main-footer .contents .company .newsletter button {
+body footer.main-footer .contents .company .newsletter .form-field button {
   border-radius: 0.3rem;
   outline: none;
   border: none;
@@ -978,11 +989,11 @@ body footer.main-footer .contents .company .newsletter button {
   width: 100%;
 }
 @media only screen and (min-width: 850px) {
-  body footer.main-footer .contents .company .newsletter button {
+  body footer.main-footer .contents .company .newsletter .form-field button {
     width: 200px;
   }
 }
-body footer.main-footer .contents .company .newsletter button:hover {
+body footer.main-footer .contents .company .newsletter .form-field button:hover {
   background: none;
   color: #f5f5f5;
 }
