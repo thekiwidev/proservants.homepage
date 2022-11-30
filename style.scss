@@ -845,7 +845,7 @@ body {
   }
 
   footer.main-footer {
-    background: $theme-black;
+    // background: lighten($theme-black, 10);
 
     .contents {
       padding: 5rem 1rem;

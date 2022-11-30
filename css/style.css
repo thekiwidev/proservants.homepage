@@ -848,9 +848,6 @@ body section.marketplace-section .contents .texts-contents p {
   margin-bottom: 1.5rem;
   max-width: 420px;
 }
-body footer.main-footer {
-  background: #090909;
-}
 body footer.main-footer .contents {
   padding: 5rem 1rem;
   display: flex;
