@@ -323,6 +323,63 @@ gsap.from(".more-info-section .stats .stat", {
   stagger: 0.3,
 });
 
+// ========================================
+// marktplace
+// ========================================
+
+gsap.from(".image-container.marketplace-image-container img", {
+  scrollTrigger: {
+    trigger: "#marketplace .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reset restart reverse",
+  },
+  scale: 0.3,
+  opacity: 0,
+  duration: 0.4,
+  stagger: 0.4,
+});
+
+gsap.from(".marketplace-text-contents h1", {
+  scrollTrigger: {
+    trigger: "#marketplace .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+
+  y: 100,
+  opacity: 0,
+  duration: 0.8,
+});
+
+gsap.from(".marketplace-text-contents p", {
+  scrollTrigger: {
+    trigger: "#marketplace .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+
+  y: 100,
+  opacity: 0,
+  duration: 0.8,
+});
+
+gsap.from(".marketplace-text-contents a.btn", {
+  scrollTrigger: {
+    trigger: "#marketplace .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+
+  y: 100,
+
+  opacity: 0,
+  duration: 0.5,
+});
+
 // toggleActions: "play none none none",
 // play
 // pause

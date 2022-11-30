@@ -760,6 +760,16 @@ body {
               p {
                 margin-bottom: 1rem;
               }
+
+              .ext-link {
+                color: $theme-orange;
+                text-decoration: none;
+                font-weight: 700;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
             }
           }
         }
@@ -835,8 +845,12 @@ body {
   }
 
   footer.main-footer {
-    height: 100vh;
+    height: 50vh;
     @include alignCenter;
     flex-direction: column;
+
+    p {
+      color: $theme-green;
+    }
   }
 }

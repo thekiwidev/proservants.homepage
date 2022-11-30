@@ -783,6 +783,14 @@ body section.more-info-section .contents main.stats .stats-contents .stat .conte
 body section.more-info-section .contents main.stats .stats-contents .stat .contents p {
   margin-bottom: 1rem;
 }
+body section.more-info-section .contents main.stats .stats-contents .stat .contents .ext-link {
+  color: #ffa42c;
+  text-decoration: none;
+  font-weight: 700;
+}
+body section.more-info-section .contents main.stats .stats-contents .stat .contents .ext-link:hover {
+  text-decoration: underline;
+}
 body section.marketplace-section {
   margin: 8rem 0;
 }
@@ -841,9 +849,12 @@ body section.marketplace-section .contents .texts-contents p {
   max-width: 420px;
 }
 body footer.main-footer {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+body footer.main-footer p {
+  color: #05ddd7;
 }/*# sourceMappingURL=style.css.map */
