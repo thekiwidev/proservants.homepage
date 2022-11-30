@@ -57,12 +57,12 @@ gsap
 
       y: 0,
       opacity: 1,
-      duration: 1,
+      duration: 0.5,
       stagger: 0.1,
       ease: Linear.easeNone,
     }
   )
-  .delay(0.7);
+  .delay(0.4);
 
 // ========================================
 // shop now
