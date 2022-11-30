@@ -1,5 +1,6 @@
 document.querySelector(".menu").addEventListener("click", () => {
   document.querySelector(".menu").classList.toggle("open");
+  document.querySelector(".nav-links").classList.toggle("open");
 });
 
 // =====================================
