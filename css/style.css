@@ -679,7 +679,7 @@ body section.deliver-now-section .contents .image-container img.pattern {
   position: absolute;
   z-index: -1;
   width: 200px;
-  bottom: -50%;
+  bottom: -40%;
   left: 35%;
 }
 body section.deliver-now-section .contents .image-container img {
