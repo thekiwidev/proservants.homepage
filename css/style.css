@@ -504,7 +504,7 @@ body section.sell-now-section .contents .image-container {
   margin-bottom: 2rem;
 }
 body section.sell-now-section .contents .image-container img {
-  width: 250px;
+  width: 350px;
 }
 @media only screen and (min-width: 850px) {
   body section.sell-now-section .contents .image-container img {
