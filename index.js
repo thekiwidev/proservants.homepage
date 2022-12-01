@@ -184,34 +184,34 @@ gsap.from(".sell-now-text-contents a.btn", {
 });
 
 // ========================================
-// sell now extra
+// featured categories
 // ========================================
 
-// // sell now extra header
-// gsap.from(".sell-now-extras h1", {
-//   scrollTrigger: {
-//     trigger: ".sell-now-extras .contents",
-//     start: "top 80%",
-//     end: "bottom 5%",
-//     toggleActions: "restart reverse restart reverse",
-//   },
-//   "clip-path": "polygon(0% 0%, 0% 18%, 0% 61%, 0% 100%)",
-//   opacity: 0,
-//   duration: 1.3,
-// });
+// sell now extra header
+gsap.from(".featured-categories h1", {
+  scrollTrigger: {
+    trigger: ".featured-categories .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+  "clip-path": "polygon(0% 0%, 0% 18%, 0% 61%, 0% 100%)",
+  opacity: 0,
+  duration: 1.3,
+});
 
-// gsap.from(".sell-now-extras .cards .card", {
-//   scrollTrigger: {
-//     trigger: ".sell-now-extras .contents",
-//     start: "top 80%",
-//     end: "bottom 5%",
-//     toggleActions: "restart reverse restart reverse",
-//   },
-//   y: 100,
-//   opacity: 0,
-//   duration: 1,
-//   stagger: 0.3,
-// });
+gsap.from(".featured-categories .cards .card", {
+  scrollTrigger: {
+    trigger: ".featured-categories .contents",
+    start: "top 80%",
+    end: "bottom 5%",
+    toggleActions: "restart reverse restart reverse",
+  },
+  y: 100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+});
 
 // ========================================
 // DELIVER NOW
