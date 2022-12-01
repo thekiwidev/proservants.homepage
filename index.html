@@ -3,18 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
       content="Proservants.com is the official marketplace website of Proservants Inc."
     />
+
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="shortcut icon"
       href="./assets/icons/favicon.png"
       type="image/x-icon"
     />
+
+    <!-- GLIDEJS LINKS -->
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="./glidejs/glidejs.css" />
+
+    <!-- glidejs JavaScript -->
+    <script src="./glidejs/glide.min.js"></script>
+    <script src="./glidejs/glidejs.js"></script>
+
     <title>ProServants - Welcome to your cultural marketplace.</title>
+
+    <!-- GSAP LINKS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   </head>
@@ -26,65 +38,67 @@
         ===============================
       -->
 
-      <!-- 
+      <div class="blobs">
+        <!-- 
         BLOB-ONE
        -->
-      <svg
-        id="blob_one"
-        width="1460.105"
-        height="1685.797"
-        viewBox="0 0 1460.105 1685.797"
-      >
-        <path
-          id="blob_1"
-          d="M962.6,175.1c176.038-25.221,358.568,81.836,468.174,225.395,99.271,130.023,38.754,313.005,67.026,475.6,28.37,163.162,138.607,311.359,97.685,471.69-48.916,191.651-156.507,388.9-335.992,461.988-181.2,73.782-381.83-14.48-559.2-97.481-163.33-76.43-303.42-191.653-395.946-349.479-94.07-160.46-180.531-354.027-120.058-530.7,57.951-169.3,273.291-197.531,408.351-311.542C725.414,408.5,792.317,199.5,962.6,175.1"
-          transform="translate(-154.247 -161.391)"
-          fill="#e05151"
-          stroke="#a4d6d5"
-          stroke-width="20"
-        />
-      </svg>
+        <svg
+          id="blob_one"
+          width="1460.105"
+          height="1685.797"
+          viewBox="0 0 1460.105 1685.797"
+        >
+          <path
+            id="blob_1"
+            d="M962.6,175.1c176.038-25.221,358.568,81.836,468.174,225.395,99.271,130.023,38.754,313.005,67.026,475.6,28.37,163.162,138.607,311.359,97.685,471.69-48.916,191.651-156.507,388.9-335.992,461.988-181.2,73.782-381.83-14.48-559.2-97.481-163.33-76.43-303.42-191.653-395.946-349.479-94.07-160.46-180.531-354.027-120.058-530.7,57.951-169.3,273.291-197.531,408.351-311.542C725.414,408.5,792.317,199.5,962.6,175.1"
+            transform="translate(-154.247 -161.391)"
+            fill="#e05151"
+            stroke="#a4d6d5"
+            stroke-width="20"
+          />
+        </svg>
 
-      <!-- 
+        <!-- 
         BLOB-TWO
        -->
 
-      <svg
-        id="blob_two"
-        xmlns="http://www.w3.org/2000/svg"
-        width="1321.454"
-        height="1469.573"
-        viewBox="0 0 1321.454 1469.573"
-      >
-        <path
-          id="blob_2"
-          d="M846.9,210.37c172.542-10.439,354.128,12.538,487.917,121.993,134.8,110.283,201.885,283.468,219.484,456.742,16.574,163.184-50.3,314.875-126.354,460.2C1348,1402.058,1272.43,1578.912,1110.3,1637.535c-162.009,58.579-336.862-20.685-492.065-95.455-139.806-67.353-271.61-161.186-334.831-302.909-59.211-132.733-9.621-278.877,11.133-422.728,21.7-150.426,9.215-315.56,111.591-427.891C516.193,267.782,683.793,220.238,846.9,210.37"
-          transform="translate(-245.336 -198.095)"
-          fill="#a4d6d5"
-          stroke="#e05151"
-          stroke-width="20"
-        />
-      </svg>
-      <!-- 
+        <svg
+          id="blob_two"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1321.454"
+          height="1469.573"
+          viewBox="0 0 1321.454 1469.573"
+        >
+          <path
+            id="blob_2"
+            d="M846.9,210.37c172.542-10.439,354.128,12.538,487.917,121.993,134.8,110.283,201.885,283.468,219.484,456.742,16.574,163.184-50.3,314.875-126.354,460.2C1348,1402.058,1272.43,1578.912,1110.3,1637.535c-162.009,58.579-336.862-20.685-492.065-95.455-139.806-67.353-271.61-161.186-334.831-302.909-59.211-132.733-9.621-278.877,11.133-422.728,21.7-150.426,9.215-315.56,111.591-427.891C516.193,267.782,683.793,220.238,846.9,210.37"
+            transform="translate(-245.336 -198.095)"
+            fill="#a4d6d5"
+            stroke="#e05151"
+            stroke-width="20"
+          />
+        </svg>
+        <!-- 
         BLOB-THREE
        -->
 
-      <svg
-        id="blob_three"
-        xmlns="http://www.w3.org/2000/svg"
-        width="1290"
-        height="1467.441"
-        viewBox="0 0 1290 1467.441"
-      >
-        <path
-          id="blob_3"
-          d="M807.434,188.543c131.2-32.3,269.76,27.981,384.545,99.269,115.862,71.956,209.236,177.3,262.768,302.746,52.766,123.647,86.166,269.563,34.409,393.635-49.63,118.976-201.2,149.048-296.844,235.481-80.349,72.612-129.361,170.324-219.172,230.842-118.7,79.988-240.673,192.4-382.717,174.735-143.049-17.8-278.53-129.622-331.707-263.607-51.63-130.087,57.819-266.33,65.929-406.053C330.6,852.92,261.319,749.72,299.769,654.334c38.852-96.383,151.594-132.81,228.166-203.066,96.164-88.232,152.774-231.531,279.5-262.725"
-          transform="translate(-235.042 -169.605)"
-          fill="#e05151"
-          stroke="#4b3434"
-          stroke-width="20"
-        />
-      </svg>
+        <svg
+          id="blob_three"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1290"
+          height="1467.441"
+          viewBox="0 0 1290 1467.441"
+        >
+          <path
+            id="blob_3"
+            d="M807.434,188.543c131.2-32.3,269.76,27.981,384.545,99.269,115.862,71.956,209.236,177.3,262.768,302.746,52.766,123.647,86.166,269.563,34.409,393.635-49.63,118.976-201.2,149.048-296.844,235.481-80.349,72.612-129.361,170.324-219.172,230.842-118.7,79.988-240.673,192.4-382.717,174.735-143.049-17.8-278.53-129.622-331.707-263.607-51.63-130.087,57.819-266.33,65.929-406.053C330.6,852.92,261.319,749.72,299.769,654.334c38.852-96.383,151.594-132.81,228.166-203.066,96.164-88.232,152.774-231.531,279.5-262.725"
+            transform="translate(-235.042 -169.605)"
+            fill="#e05151"
+            stroke="#4b3434"
+            stroke-width="20"
+          />
+        </svg>
+      </div>
 
       <!-- 
         ====================================
@@ -105,22 +119,6 @@
                 <li><a href="#shop">Shop Now</a></li>
                 <li><a href="#sell">Sell Now</a></li>
                 <li><a href="#deliver">Deliver Now</a></li>
-                <!-- <li class="drop-down-container">
-                  <a href="#">Accounts</a>
-                  <ul class="drop-down">
-                    <li>
-                      <a href="https://proservants.com/users/login">Login</a>
-                    </li>
-                    <li>
-                      <a href="https://proservants.com/purchase_history"
-                        >Orders</a
-                      >
-                    </li>
-                    <li>
-                      <a href="https://proservants.com/wishlists">Whishlist</a>
-                    </li>
-                  </ul>
-                </li> -->
               </ul>
               <div class="menu">
                 <div class="menu-burger"></div>
@@ -182,6 +180,147 @@
         </div>
       </section>
 
+      <section class="featured-products">
+        <div class="container">
+          <div class="contents">
+            <div class="header">
+              <h1>featured products.</h1>
+            </div>
+            <div class="glide featured-products-slide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides products-slides">
+                  <li class="glide__slide product-slide">
+                    <div class="product">
+                      <div class="product-image">
+                        <img
+                          src="https://proservants.com/public/uploads/all/MpChPxDR1sInmjBI1B8FYn3piGI2CKxBaRnXmXFN.webp"
+                          alt="christmas socks"
+                        />
+                      </div>
+                      <div class="product-title">
+                        <h4>christmas Stocking</h4>
+                        <p>by Albert</p>
+                      </div>
+                      <a
+                        href="https://proservants.com/product/christmas-stocking-by-albert"
+                        target="_blank"
+                        class="btn btn-orange"
+                        >View Product</a
+                      >
+                    </div>
+                  </li>
+                  <li class="glide__slide product-slide">
+                    <div class="product">
+                      <div class="product-image">
+                        <img
+                          src="https://proservants.com/public/uploads/all/4BA0f9bcwm7cBWDZnAK39342XLPhPTnZKi3BZfcY.jpg"
+                          alt="Tropiway Plantain Fufu"
+                        />
+                      </div>
+                      <div class="product-title">
+                        <h4>Tropiway Plantain Fufu</h4>
+                        <p>by Seller</p>
+                      </div>
+                      <a
+                        href="https://proservants.com/product/-zx7a4"
+                        target="_blank"
+                        class="btn btn-orange"
+                        >View Product</a
+                      >
+                    </div>
+                  </li>
+                  <li class="glide__slide product-slide">
+                    <div class="product">
+                      <div class="product-image">
+                        <img
+                          src="https://proservants.com/public/uploads/all/TjSou9nSnwBCQXPJghT6QFwYjp2ifiqSIax4UJyV.jpg"
+                          alt="Evasda Foods-Tombrown (500g)-1 box-(15 pouches/box)"
+                        />
+                      </div>
+                      <div class="product-title">
+                        <h4>Evasda Foods-Tombrown</h4>
+                        <p>by Seller</p>
+                      </div>
+                      <a
+                        href="https://proservants.com/product/evasda-foods-tombrown-500g-1-box-15-pouchesbox"
+                        target="_blank"
+                        class="btn btn-orange"
+                        >View Product</a
+                      >
+                    </div>
+                  </li>
+                  <li class="glide__slide product-slide">
+                    <div class="product">
+                      <div class="product-image">
+                        <img
+                          src="https://proservants.com/public/uploads/all/MeqbRDcTwuq8XipgK1lUmmo515O8JaKBn1bpUTU3.jpg"
+                          alt="Exeter Corned Beef (340g)"
+                        />
+                      </div>
+                      <div class="product-title">
+                        <h4>Exeter Corned Beef (340g)</h4>
+                        <p>by Seller</p>
+                      </div>
+                      <a
+                        href="https://proservants.com/product/demo-product-103-kncjm"
+                        target="_blank"
+                        class="btn btn-orange"
+                        >View Product</a
+                      >
+                    </div>
+                  </li>
+                  <li class="glide__slide product-slide">
+                    <div class="product">
+                      <div class="product-image">
+                        <img
+                          src="https://proservants.com/public/uploads/all/qSz0OQUJ9O38yBwrtCRmFMK8MCITVFzEcdRnMpGs.jpg"
+                          alt="Honey beans"
+                        />
+                      </div>
+                      <div class="product-title">
+                        <h4>Honey beans</h4>
+                        <p>by Seller</p>
+                      </div>
+                      <a
+                        href="https://proservants.com/product/-qqfwp"
+                        target="_blank"
+                        class="btn btn-orange"
+                        >View Product</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- BULLETS -->
+
+              <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+              </div>
+
+              <!-- ARROWS -->
+
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left btn btn-orange-outline"
+                  data-glide-dir="<"
+                >
+                  prev
+                </button>
+                <button
+                  class="glide__arrow glide__arrow--right btn btn-orange-outline"
+                  data-glide-dir=">"
+                >
+                  next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="sell-now-section" id="sell">
         <div class="container">
           <div class="contents">
@@ -210,60 +349,6 @@
           </div>
         </div>
       </section>
-
-      <!-- <section class="sell-now-extras">
-          <div class="contents">
-            <h1>You can't go wrong with <span>ProServants</span></h1>
-            <div class="cards">
-              <div class="card invoice">
-                <div class="card-header">
-                  <div class="image">
-                    <img src="./assets/icons/invoice.png" alt="gifts" />
-                  </div>
-                </div>
-
-                <div class="card-body-contents">
-                  <h2>Auto Invoice</h2>
-                  <p>Lorem ipsum, adipisicing elit, consectetur velit.</p>
-                </div>
-                <div class="card-call-to-action">
-                  <a href="#" class="ext-link">Learn More</a>
-                </div>
-              </div>
-              <div class="card convenience">
-                <div class="card-header">
-                  <div class="image">
-                    <img src="./assets/icons/easy.png" alt="gifts" />
-                  </div>
-                </div>
-
-                <div class="card-body-contents">
-                  <h2>Convenience</h2>
-                  <p>Lorem ipsum, accusantium, consectetur velit.</p>
-                </div>
-                <div class="card-call-to-action">
-                  <a href="#" class="ext-link">Learn More</a>
-                </div>
-              </div>
-              <div class="card supports">
-                <div class="card-header">
-                  <div class="image">
-                    <img src="./assets/icons/supports.png" alt="gifts" />
-                  </div>
-                </div>
-
-                <div class="card-body-contents">
-                  <h2>24/7 Customer Supports</h2>
-                  <p>Lorem ipsum, consectetur velit.</p>
-                </div>
-
-                <div class="card-call-to-action">
-                  <a href="#" class="ext-link">Learn More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> -->
 
       <section class="deliver-now-section" id="deliver">
         <div class="container">

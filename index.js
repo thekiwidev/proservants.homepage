@@ -389,3 +389,23 @@ gsap.from(".marketplace-text-contents a.btn", {
 // reset
 // complete
 // none
+
+// =================================
+// GLIDE JS
+// =================================
+
+new Glide(".featured-products-slide", {
+  type: "carousel",
+  startAt: 0,
+  perView: 3,
+  autoplay: 5000,
+  hoverpause: false,
+  breakpoints: {
+    850: {
+      perView: 2,
+    },
+    600: {
+      perView: 1,
+    },
+  },
+}).mount();
