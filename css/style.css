@@ -194,24 +194,19 @@ body {
   height: 100vh;
   background: #090909;
   color: #f5f5f5;
-  overflow-x: hidden;
   height: 100%;
   width: 100vw;
 }
 body #blob_one {
   display: none;
 }
-@media only screen and (min-width: 1920px) {
-  body #blob_one {
-    position: absolute;
-    z-index: -100;
-    opacity: 0.2;
-    right: -270%;
-  }
-}
 @media only screen and (min-width: 850px) {
   body #blob_one {
-    right: -40%;
+    display: block;
+    position: absolute;
+    right: -50%;
+    z-index: -100;
+    opacity: 0.2;
   }
 }
 body #blob_two {
@@ -219,15 +214,11 @@ body #blob_two {
 }
 @media only screen and (min-width: 850px) {
   body #blob_two {
+    display: block;
     left: -40%;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  body #blob_two {
     position: absolute;
-    top: 200vh;
+    top: 230vh;
     z-index: -100;
-    left: -250%;
     opacity: 0.2;
   }
 }
@@ -236,15 +227,11 @@ body #blob_three {
 }
 @media only screen and (min-width: 850px) {
   body #blob_three {
+    display: block;
     right: -40%;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  body #blob_three {
     position: absolute;
     top: 360vh;
     z-index: -100;
-    right: -250%;
     opacity: 0.2;
   }
 }
