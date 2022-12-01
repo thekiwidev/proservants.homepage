@@ -490,6 +490,7 @@ body section.featured-products .contents {
   background: #f5f5f5;
   border-radius: 1rem;
   padding: 2rem;
+  width: 98%;
 }
 body section.featured-products .contents .header {
   color: #090909;
