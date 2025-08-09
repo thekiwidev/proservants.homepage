@@ -2,7 +2,12 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 type HeadingRole = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-type HighlightType = "gradient" | "primary" | "accent";
+type HighlightType = "gradient" | "primary" | "accent" | `#${string}`;
+
+function isValidHexCode(value: string): boolean {
+  // Accepts #RGB, #RRGGBB, #RGBA, #RRGGBBAA
+  return /^#([A-Fa-f0-9]{3,4}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$/.test(value);
+}
 
 interface SectionHeadingProps {
   children: React.ReactNode;
@@ -59,19 +64,67 @@ export function SectionHeading({
       if (React.isValidElement(child) && child.type === "span") {
         const existingClassName = (child.props as { className?: string })
           .className;
-        const spanClasses = highlight
-          ? cn(existingClassName, highlightClasses[highlight], "font-serif")
-          : cn(existingClassName, "font-serif");
+        let spanClasses;
+        if (highlight) {
+          if (highlight.startsWith("#")) {
+            if (!isValidHexCode(highlight)) {
+              console.warn(`Invalid hex code for highlight: ${highlight}`);
+            }
+            spanClasses = cn(existingClassName, "font-serif");
+          } else {
+            spanClasses = cn(
+              existingClassName,
+              highlight in highlightClasses
+                ? highlightClasses[highlight as keyof typeof highlightClasses]
+                : "",
+              "font-serif"
+            );
+          }
+        } else {
+          spanClasses = cn(existingClassName, "font-serif");
+        }
 
         return React.cloneElement(
-          child as React.ReactElement<{ className?: string }>,
+          child as React.ReactElement<{
+            className?: string;
+            style?: React.CSSProperties;
+          }>,
           {
             className: spanClasses,
+            style:
+              highlight &&
+              highlight.startsWith("#") &&
+              isValidHexCode(highlight)
+                ? { color: highlight }
+                : undefined,
           }
         );
       }
       return child;
     });
+  };
+
+  // Check if we have spans that should be highlighted
+  const hasHighlightableSpans = React.Children.toArray(children).some(
+    (child) => React.isValidElement(child) && child.type === "span"
+  );
+
+  // Only apply hex color to main component if there are no spans to highlight
+  const shouldApplyHexColorToMain =
+    highlight &&
+    highlight.startsWith("#") &&
+    isValidHexCode(highlight) &&
+    !hasHighlightableSpans;
+
+  // Get highlight classes for non-hex highlights (only if no spans to highlight)
+  const getHighlightClass = () => {
+    if (!highlight) return "";
+    if (highlight.startsWith("#")) return "";
+    if (hasHighlightableSpans) return ""; // Don't apply to main if spans exist
+    if (highlight in highlightClasses) {
+      return highlightClasses[highlight as keyof typeof highlightClasses];
+    }
+    return "";
   };
 
   return (
@@ -82,8 +135,10 @@ export function SectionHeading({
         weightClasses[weight],
         alignClasses[align],
         "text-dark-900",
+        getHighlightClass(),
         className
       )}
+      style={shouldApplyHexColorToMain ? { color: highlight } : undefined}
       {...props}
     >
       {processChildren(children)}

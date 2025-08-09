@@ -2,6 +2,26 @@
 
 All notable changes to the MigranX website project will be documented in this file.
 
+## [0.3.0] - 2025-08-09
+
+### Changed
+
+- **Component Architecture Refactor**
+  - Reorganized components into `home`, `shared`, and `ui` directories for better modularity and scalability.
+  - Centralized shared components like `Header` and `Footer` into the main `layout.tsx` to streamline page rendering and reduce code duplication.
+  - Grouped page-specific components by feature (e.g., all homepage components are now in `components/home/`).
+
+- **`SectionHeading` Component Enhancement**
+  - The `highlight` prop now accepts any valid hex color code, allowing for more flexible and dynamic text styling.
+  - Highlighting logic is now smarter: it correctly scopes styles to `<span>` elements within the heading for granular control, and applies to the entire heading only when no `<span>` is present.
+
+### Fixed
+
+- Corrected a bug where the `SectionHeading` component would apply highlights to the entire text instead of just the specified `<span>` element.
+- Resolved TypeScript errors related to implicit `any` types and incorrect prop types in the `SectionHeading` component.
+
+---
+
 ## [0.2.0] - 2025-08-06
 
 ### Added

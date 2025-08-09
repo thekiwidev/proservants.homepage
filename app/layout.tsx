@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
+import { Header, Footer } from "@/components/shared";
 import "./globals.css";
 
 const sen = Sen({
@@ -21,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sen.variable} antialiased`}>{children}</body>
+      <body className={`${sen.variable} antialiased`}>
+        <Header />
+        <main className="pt-16">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
