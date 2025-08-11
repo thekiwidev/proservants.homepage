@@ -4,9 +4,10 @@ All notable changes to the MigranX website project will be documented in this fi
 
 ## [0.3.0] - 2025-08-09
 
-### Changed
+### [0.3.0] - 2025-08-09 - Changed
 
 - **Component Architecture Refactor**
+
   - Reorganized components into `home`, `shared`, and `ui` directories for better modularity and scalability.
   - Centralized shared components like `Header` and `Footer` into the main `layout.tsx` to streamline page rendering and reduce code duplication.
   - Grouped page-specific components by feature (e.g., all homepage components are now in `components/home/`).
@@ -76,7 +77,7 @@ All notable changes to the MigranX website project will be documented in this fi
   - `tailwind-merge` for CSS class merging
   - Updated to React 19.1.0 and Next.js 15.4.5
 
-### Changed
+### [0.2.0] - 2025-08-06 - Changed
 
 - **Complete UI/UX Redesign**
 

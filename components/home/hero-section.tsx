@@ -2,7 +2,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Container, Paragraph, SectionHeading } from "@/components/ui";
-import { FaAppStore, FaGooglePlay } from "react-icons/fa6";
+import { FaApple, FaGoogle } from "react-icons/fa6";
 
 interface HeroSectionProps {
   className?: string;
@@ -36,7 +36,7 @@ export function HeroSection({ className }: HeroSectionProps) {
             size="2xl"
             role="h1"
             highlight="#fff"
-            className="text-4xl lg:text-6xl lg:text-left font-bold mb-4 bg-primary-600 px-6 py-4"
+            className="text-4xl lg:text-6xl lg:text-left font-bold mb-4 bg-primary-500 px-6 py-4"
           >
             Your Roots, Your Way. <span>Authentic Culture</span>, Delivered.
           </SectionHeading>
@@ -51,23 +51,23 @@ export function HeroSection({ className }: HeroSectionProps) {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#"
-              className="bg-white text-black px-10 py-4 rounded-xl hover:bg-gray-200 transition"
+              className="flex items-center bg-white text-black px-10 py-4 rounded-xl hover:bg-gray-200 transition"
             >
-              <div className="flex items-center gap-2">
-                <FaAppStore className="h-5 w-5" />
-                <span>Download on the</span>
+              <FaApple className="h-10 w-10" />
+              <div>
+                <p className="text-sm font-medium m-0">Download on the</p>
+                <p className="text-xl font-bold">App Store</p>
               </div>
-              <p className="text-xl font-bold">App Store</p>
             </a>
             <a
               href="#"
-              className="bg-white text-black px-10 py-4 rounded-xl hover:bg-gray-200 transition"
+              className="flex items-center bg-white text-black px-10 py-4 rounded-xl hover:bg-gray-200 transition"
             >
-              <div className="flex items-center gap-2">
-                <FaGooglePlay className="h-5 w-5" />
-                <span>Get it on</span>
+              <FaGoogle className="h-10 w-10" />
+              <div>
+                <span className="text-sm font-medium m-0">Get it on</span>
+                <p className="text-xl font-bold">Google Play</p>
               </div>
-              <p className="text-xl font-bold">Google Play</p>
             </a>
           </div>
         </div>
