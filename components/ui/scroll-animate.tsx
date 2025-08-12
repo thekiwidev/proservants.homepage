@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion, type HTMLMotionProps, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  type HTMLMotionProps,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface ScrollAnimateProps
@@ -51,21 +56,14 @@ export function ScrollAnimate({
     progress,
     [0, 1],
     [
-      type === "image"
-        ? (variants.hidden as { scale: number }).scale
-        : 1,
-      type === "image"
-        ? (variants.visible as { scale: number }).scale
-        : 1,
+      type === "image" ? (variants.hidden as { scale: number }).scale : 1,
+      type === "image" ? (variants.visible as { scale: number }).scale : 1,
     ]
   );
   const x = useTransform(
     progress,
     [0, 1],
-    [
-      type === "text" ? (variants.hidden as { x: number }).x : 0,
-      0,
-    ]
+    [type === "text" ? (variants.hidden as { x: number }).x : 0, 0]
   );
 
   useEffect(() => {
@@ -77,9 +75,7 @@ export function ScrollAnimate({
     return () => unsubscribe();
   }, [progress, hasCompleted]);
 
-  const style = hasCompleted
-    ? variants.visible
-    : { opacity, scale, x };
+  const style = hasCompleted ? variants.visible : { opacity, scale, x };
 
   return (
     <motion.div ref={ref} style={style} className={cn(className)} {...props}>
@@ -87,4 +83,3 @@ export function ScrollAnimate({
     </motion.div>
   );
 }
-
