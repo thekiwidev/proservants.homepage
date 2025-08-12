@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Container, SectionHeading } from "@/components/ui";
+import { Container, SectionHeading, ScrollAnimate } from "@/components/ui";
 import Image from "next/image";
 
 interface ShippingFeatureSectionProps {
@@ -27,7 +27,11 @@ export function ShippingFeatureSection({
       <Container size="xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Phone mockup */}
-          <div className="relative order-2 lg:order-1">
+          <ScrollAnimate
+            type="image"
+            direction="none"
+            className="relative order-2 lg:order-1"
+          >
             <div className="relative">
               {/* Decorative elements */}
               <div className="absolute -top-4 -left-4 w-8 h-8">
@@ -95,81 +99,83 @@ export function ShippingFeatureSection({
                 </svg>
               </div>
             </div>
-          </div>
+          </ScrollAnimate>
 
           {/* Right side - Content */}
           <div className="order-1 lg:order-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
-              <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">
-                FLEXIBLE SHIPPING
-              </span>
-            </div>
+            <ScrollAnimate type="text" direction="right">
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
+                <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">
+                  FLEXIBLE SHIPPING
+                </span>
+              </div>
 
-            <SectionHeading
-              role="h2"
-              size="2xl"
-              highlight="accent"
-              className="lg:text-left"
-            >
-              Shipping, Simplified. <span>Your Way</span>.
-            </SectionHeading>
+              <SectionHeading
+                role="h2"
+                size="2xl"
+                highlight="accent"
+                className="lg:text-left"
+              >
+                Shipping, Simplified. <span>Your Way</span>.
+              </SectionHeading>
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
-              Buying that perfect handcrafted item or beautiful piece of fabric
-              shouldn&apos;t be complicated. Our app puts you in control of the
-              shipping process. Choose from our reliable in-house delivery
-              service or select a trusted third-party logistics partner with the
-              flexibility to match your budget and timeline.
-            </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
+                Buying that perfect handcrafted item or beautiful piece of fabric
+                shouldn&apos;t be complicated. Our app puts you in control of the
+                shipping process. Choose from our reliable in-house delivery
+                service or select a trusted third-party logistics partner with the
+                flexibility to match your budget and timeline.
+              </p>
 
-            {/* Feature list */}
-            <div className="space-y-4 mb-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-3 h-3 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={3}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
+              {/* Feature list */}
+              <div className="space-y-4 mb-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg
+                        className="w-3 h-3 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={3}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-black font-medium">{feature.text}</span>
                   </div>
-                  <span className="text-black font-medium">{feature.text}</span>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            {/* CTA Button */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                <span>Compare Shipping</span>
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
+              {/* CTA Button */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                  <span>Compare Shipping</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
 
-              <button className="border-2 border-black text-black px-8 py-4 rounded-full font-semibold hover:bg-black hover:text-white transition-colors">
-                Track Order
-              </button>
-            </div>
+                <button className="border-2 border-black text-black px-8 py-4 rounded-full font-semibold hover:bg-black hover:text-white transition-colors">
+                  Track Order
+                </button>
+              </div>
+            </ScrollAnimate>
           </div>
         </div>
       </Container>

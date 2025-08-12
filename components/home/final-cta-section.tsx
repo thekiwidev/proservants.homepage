@@ -1,7 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Container, Button, SectionHeading, Paragraph } from "@/components/ui";
+import {
+  Container,
+  Button,
+  SectionHeading,
+  Paragraph,
+  ScrollAnimate,
+} from "@/components/ui";
 
 import { FaAppStore, FaGooglePlay } from "react-icons/fa6";
 
@@ -21,21 +27,25 @@ export function FinalCtaSection({ className }: FinalCtaSectionProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="text-left lg:pr-8">
-            <SectionHeading
-              role="h2"
-              size="xl"
-              className="mb-6 lg:text-left text-white"
-              highlight="primary"
-            >
-              A Taste of Home is Waiting. Join the{" "}
-              <span>MigranX Community</span>.
-            </SectionHeading>
+            <ScrollAnimate type="text" direction="left">
+              <SectionHeading
+                role="h2"
+                size="xl"
+                className="mb-6 lg:text-left text-white"
+                highlight="primary"
+              >
+                A Taste of Home is Waiting. Join the{" "}
+                <span>MigranX Community</span>.
+              </SectionHeading>
+            </ScrollAnimate>
 
-            <Paragraph size="lg" className="mb-12 text-gray-300">
-              Your journey to rediscover your roots begins with a single tap.
-              Download the app now and start connecting with authentic cultural
-              foods from around the world.
-            </Paragraph>
+            <ScrollAnimate type="text" direction="left">
+              <Paragraph size="lg" className="mb-12 text-gray-300">
+                Your journey to rediscover your roots begins with a single tap.
+                Download the app now and start connecting with authentic cultural
+                foods from around the world.
+              </Paragraph>
+            </ScrollAnimate>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6">
@@ -62,7 +72,11 @@ export function FinalCtaSection({ className }: FinalCtaSectionProps) {
             </div>
           </div>
           {/* Right Image */}
-          <div className="h-[400px] sm:h-[500px] lg:h-[650px] xl:h-[750px] overflow-hidden lg:ml-auto">
+          <ScrollAnimate
+            type="image"
+            direction="none"
+            className="h-[400px] sm:h-[500px] lg:h-[650px] xl:h-[750px] overflow-hidden lg:ml-auto"
+          >
             <Image
               src="/images/hero.png"
               alt="MigranX App"
@@ -71,7 +85,7 @@ export function FinalCtaSection({ className }: FinalCtaSectionProps) {
               className="object-cover w-full h-full"
               priority
             />
-          </div>
+          </ScrollAnimate>
           {/* Stats or social proof */}
           <div className="col-span-1 lg:col-span-2 mt-16 pt-16 border-t border-gray-800">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
