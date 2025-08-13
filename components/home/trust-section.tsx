@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Container, SectionHeading, Paragraph } from "@/components/ui";
+import { Container, SectionHeading, Paragraph, ScrollAnimate } from "@/components/ui";
 import {
   FaShieldAlt,
   FaLock,
@@ -249,26 +249,30 @@ export function TrustSection({ className }: TrustSectionProps) {
             </span>
           </div>
 
-          <SectionHeading
-            role="h2"
-            size="2xl"
-            highlight="accent"
-            className="mb-6"
-          >
-            Your Security. Powered by <span>Stripe</span>.
-          </SectionHeading>
+          <ScrollAnimate type="text" direction="left">
+            <SectionHeading
+              role="h2"
+              size="2xl"
+              highlight="accent"
+              className="mb-6"
+            >
+              Your Security. Powered by <span>Stripe</span>.
+            </SectionHeading>
+          </ScrollAnimate>
 
-          <Paragraph
-            size="lg"
-            align="center"
-            muted
-            className="max-w-3xl mx-auto mb-16"
-          >
-            We prioritize your peace of mind. That&apos;s why we&apos;ve
-            partnered with Stripe, a global leader in payment processing, to
-            handle all transactions. Your personal and payment information is
-            protected by industry-leading security protocols.
-          </Paragraph>
+          <ScrollAnimate type="text" direction="left">
+            <Paragraph
+              size="lg"
+              align="center"
+              muted
+              className="max-w-3xl mx-auto mb-16"
+            >
+              We prioritize your peace of mind. That&apos;s why we&apos;ve
+              partnered with Stripe, a global leader in payment processing, to
+              handle all transactions. Your personal and payment information is
+              protected by industry-leading security protocols.
+            </Paragraph>
+          </ScrollAnimate>
 
           {/* Central Stripe Logo with Radiating Security Features */}
           <div className="relative max-w-4xl mx-auto">
@@ -336,24 +340,28 @@ export function TrustSection({ className }: TrustSectionProps) {
             </span>
           </div>
 
-          <SectionHeading
-            role="h2"
-            size="2xl"
-            highlight="accent"
-            className="mb-6"
-          >
-            Stories from the <span>MigranX Community</span>
-          </SectionHeading>
+          <ScrollAnimate type="text" direction="left">
+            <SectionHeading
+              role="h2"
+              size="2xl"
+              highlight="accent"
+              className="mb-6"
+            >
+              Stories from the <span>MigranX Community</span>
+            </SectionHeading>
+          </ScrollAnimate>
 
-          <Paragraph
-            size="lg"
-            align="center"
-            muted
-            className="max-w-2xl mx-auto mb-16"
-          >
-            The heart of our marketplace is the people who use it. See what our
-            users and sellers have to say.
-          </Paragraph>
+          <ScrollAnimate type="text" direction="left">
+            <Paragraph
+              size="lg"
+              align="center"
+              muted
+              className="max-w-2xl mx-auto mb-16"
+            >
+              The heart of our marketplace is the people who use it. See what our
+              users and sellers have to say.
+            </Paragraph>
+          </ScrollAnimate>
 
           {/* Scrolling Testimonials Marquee */}
           <div className="relative overflow-hidden py-4">

@@ -185,6 +185,31 @@ If you ever need **pure CSS**:
 
 ---
 
+## 9. ScrollAnimate Wrapper
+
+The `ScrollAnimate` component provides a convenient way to fade/slide content based on scroll position.
+
+```tsx
+import { ScrollAnimate, SectionHeading } from "@/components/ui";
+
+<ScrollAnimate type="text" direction="left">
+  <SectionHeading>Animated Text</SectionHeading>
+</ScrollAnimate>
+
+<ScrollAnimate type="image" direction="none">
+  <img src="/path/to/image.png" alt="demo" />
+</ScrollAnimate>
+```
+
+Options:
+
+- `type`: `"text" | "image"` – chooses between slide or scale variants.
+- `direction`: `"left" | "right" | "none"` – starting offset for text animations.
+
+Animations play once when fully scrolled into view and reset if the element leaves before completion.
+
+---
+
 ## ✅ Acceptance Criteria
 
 1. **Bun** installed `framer-motion` without errors.

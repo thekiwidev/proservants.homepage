@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Container, SectionHeading, Paragraph } from "@/components/ui";
+import { Container, SectionHeading, Paragraph, ScrollAnimate } from "@/components/ui";
 import Image from "next/image";
 
 interface HowItWorksSectionProps {
@@ -137,23 +137,27 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
               HOW IT WORKS
             </span>
           </div>
-          <SectionHeading
-            role="h2"
-            size="2xl"
-            highlight="accent"
-            className="mb-6"
-          >
-            Simple. Seamless. <span>Satisfying.</span>
-          </SectionHeading>
-          <Paragraph
-            size="lg"
-            align="center"
-            muted
-            className="max-w-3xl mx-auto"
-          >
-            Experience the easiest way to connect with your cultural heritage.
-            From discovery to delivery, every step is designed with you in mind.
-          </Paragraph>
+          <ScrollAnimate type="text" direction="left">
+            <SectionHeading
+              role="h2"
+              size="2xl"
+              highlight="accent"
+              className="mb-6"
+            >
+              Simple. Seamless. <span>Satisfying.</span>
+            </SectionHeading>
+          </ScrollAnimate>
+          <ScrollAnimate type="text" direction="left">
+            <Paragraph
+              size="lg"
+              align="center"
+              muted
+              className="max-w-3xl mx-auto"
+            >
+              Experience the easiest way to connect with your cultural heritage.
+              From discovery to delivery, every step is designed with you in mind.
+            </Paragraph>
+          </ScrollAnimate>
         </div>
 
         <div className="space-y-32">
@@ -166,7 +170,9 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
                 )}
               >
                 {/* Content Side */}
-                <div
+                <ScrollAnimate
+                  type="text"
+                  direction={index % 2 === 0 ? "left" : "right"}
                   className={cn(
                     "space-y-8",
                     index % 2 === 1 ? "lg:col-start-2" : ""
@@ -231,10 +237,12 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
                       {index === 3 && "Track Orders"}
                     </button>
                   </div>
-                </div>
+                </ScrollAnimate>
 
                 {/* Image Side */}
-                <div
+                <ScrollAnimate
+                  type="image"
+                  direction="none"
                   className={cn(
                     "relative",
                     index % 2 === 1 ? "lg:col-start-1" : ""
@@ -297,7 +305,7 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-400/20 to-transparent rounded-full blur-3xl"></div>
                     </div>
                   </div>
-                </div>
+                </ScrollAnimate>
               </div>
 
               {/* Connection line to next step */}
@@ -313,18 +321,22 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
 
         {/* Final CTA Section */}
         <div className="text-center mt-20 pt-16 border-t border-gray-200">
-          <SectionHeading
-            role="h3"
-            size="lg"
-            highlight="primary"
-            className="mb-6"
-          >
-            Ready to Experience <span>Authentic Culture</span>?
-          </SectionHeading>
-          <Paragraph size="lg" muted className="mb-8 max-w-2xl mx-auto">
-            Join thousands of people who have already discovered their cultural
-            roots through MigranX.
-          </Paragraph>
+          <ScrollAnimate type="text" direction="left">
+            <SectionHeading
+              role="h3"
+              size="lg"
+              highlight="primary"
+              className="mb-6"
+            >
+              Ready to Experience <span>Authentic Culture</span>?
+            </SectionHeading>
+          </ScrollAnimate>
+          <ScrollAnimate type="text" direction="left">
+            <Paragraph size="lg" muted className="mb-8 max-w-2xl mx-auto">
+              Join thousands of people who have already discovered their cultural
+              roots through MigranX.
+            </Paragraph>
+          </ScrollAnimate>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors">
               Download App
