@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+MigranX Website (Next.js)
+=========================
 
-## Getting Started
+Production-ready marketing website for MigranX, built with Next.js App Router, Tailwind CSS v4, and React 19. It showcases the product value, links to mobile apps, and includes briefs for future pages (Homepage, Sellers, Drivers) to guide content and design.
 
-First, run the development server:
+Tech stack
+—
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 15 (App Router)
+- React 19
+- Tailwind CSS v4 (+ @tailwindcss/postcss)
+- TypeScript
+- Bun (package manager)
+- Framer Motion (scroll-driven animations)
+
+Scripts
+—
+
+- dev: bun dev
+- build: bun run build
+- start: bun run start
+- lint: bun run lint
+
+Quick start
+—
+
+1) bun install
+2) bun dev
+3) Open <http://localhost:3000>
+
+File structure (key paths)
+—
+
+```text
+app/
+	globals.css
+	layout.tsx
+	page.tsx
+components/
+	home/
+		hero-section.tsx
+		features-section.tsx
+		explore-feature-section.tsx
+		cart-feature-section.tsx
+		delivery-feature-section.tsx
+		shipping-feature-section.tsx
+		how-it-works-section.tsx
+		trust-section.tsx
+		final-cta-section.tsx
+	shared/
+		header.tsx
+		footer.tsx
+	ui/
+		button.tsx
+		container.tsx
+		paragraph.tsx
+		section-heading.tsx
+		scroll-animate.tsx
+docs/
+	migranx-website-homepage-brief.md
+	migranx-website-vendor-brief.md
+	migranx-website-driver-brief.md
+	migranx-website-redesign-brief.md
+lib/
+	animations.ts
+	utils.ts
+public/
+	images/
+	videos/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Content and design briefs
+—
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Homepage: docs/migranx-website-homepage-brief.md
+- Sellers (Vendors): docs/migranx-website-vendor-brief.md
+- Drivers: docs/migranx-website-driver-brief.md
+- Redesign overview: docs/migranx-website-redesign-brief.md
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Notes
+—
 
-## Learn More
+- Shared UI comes from components/ui and components/shared; prefer these over custom-styled HTML.
+- Animations use Framer Motion; see lib/animations.ts and the ScrollAnimate component.
+- Color/theme tokens are defined in app/globals.css (Tailwind v4 utilities layered).
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
