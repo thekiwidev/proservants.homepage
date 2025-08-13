@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue, type HTMLMotionProps } from "framer-motion";
 
-interface ScrollAnimateProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ScrollAnimateProps
+  extends Omit<HTMLMotionProps<"div">, "style" | "children" | "ref"> {
   children: React.ReactNode;
 }
 
