@@ -3,6 +3,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Container, Paragraph, SectionHeading } from "@/components/ui";
 import { FaApple, FaGoogle } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 interface HeroSectionProps {
   className?: string;
@@ -23,7 +24,12 @@ export function HeroSection({ className }: HeroSectionProps) {
         playsInline
       />
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/50" />
+      <motion.div
+        className="absolute inset-0 bg-black"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 1.2 }}
+      />
 
       {/* Two-column content layout */}
       <Container
@@ -31,7 +37,12 @@ export function HeroSection({ className }: HeroSectionProps) {
         className="relative z-10 flex items-center justify-between h-full text-white px-4"
       >
         {/* Left content */}
-        <div className="max-w-xl">
+        <motion.div
+          className="max-w-xl"
+          initial={{ x: -120, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           <SectionHeading
             size="2xl"
             role="h1"
@@ -70,7 +81,7 @@ export function HeroSection({ className }: HeroSectionProps) {
               </div>
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right placeholder (empty for now) */}
         <div className="w-1/3 h-64 bg-transparent" />
