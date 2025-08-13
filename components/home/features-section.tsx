@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Container, SectionHeading } from "@/components/ui";
+import { Container, SectionHeading, ScrollAnimate } from "@/components/ui";
 
 interface FeatureCardProps {
   number: string;
@@ -106,17 +106,21 @@ export function FeaturesSection({ className }: FeaturesSectionProps) {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left content */}
           <div className="lg:sticky lg:top-30">
-            <SectionHeading
-              highlight="primary"
-              className="text-4xl lg:text-left lg:text-6xl font-bold text-black leading-tight mb-6"
-            >
-              <span>Authentic</span> cultural connections
-            </SectionHeading>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-              Connecting immigrants with their cultural heritage through
-              authentic products, community engagement, and seamless delivery
-              experiences.
-            </p>
+            <ScrollAnimate type="text" direction="left">
+              <SectionHeading
+                highlight="primary"
+                className="text-4xl lg:text-left lg:text-6xl font-bold text-black leading-tight mb-6"
+              >
+                <span>Authentic</span> cultural connections
+              </SectionHeading>
+            </ScrollAnimate>
+            <ScrollAnimate type="text" direction="left">
+              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                Connecting immigrants with their cultural heritage through
+                authentic products, community engagement, and seamless delivery
+                experiences.
+              </p>
+            </ScrollAnimate>
 
             {/* Testimonial */}
             <div className="mt-12 p-6 bg-black rounded-2xl text-white">
