@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Container, Button } from "@/components/ui";
@@ -20,11 +21,14 @@ export function Header({ className }: HeaderProps) {
   ];
 
   return (
-    <header
+    <motion.header
       className={cn(
         "fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50",
         className
       )}
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
     >
       <Container size="xl">
         <div className="flex items-center justify-between h-16">
@@ -121,6 +125,6 @@ export function Header({ className }: HeaderProps) {
           </div>
         )}
       </Container>
-    </header>
+    </motion.header>
   );
 }
