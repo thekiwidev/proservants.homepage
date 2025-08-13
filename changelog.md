@@ -22,7 +22,7 @@ All notable changes to the MigranX website project will be documented in this fi
   - The `highlight` prop now accepts any valid hex color code, allowing for more flexible and dynamic text styling.
   - Highlighting logic is now smarter: it correctly scopes styles to `<span>` elements within the heading for granular control, and applies to the entire heading only when no `<span>` is present.
 
-### Fixed
+### [0.3.0] - Fixed
 
 - Corrected a bug where the `SectionHeading` component would apply highlights to the entire text instead of just the specified `<span>` element.
 - Resolved TypeScript errors related to implicit `any` types and incorrect prop types in the `SectionHeading` component.
