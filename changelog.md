@@ -2,6 +2,12 @@
 
 All notable changes to the MigranX website project will be documented in this file.
 
+## [0.3.1] - Fix: Align ScrollAnimate props with Framer Motion
+
+### Fixed
+
+- Resolved TypeScript build error in `components/ui/scroll-animate.tsx` by switching component props to use `HTMLMotionProps<"div">` (omitting `style`, `children`, and `ref`) to match `motion.div` expectations.
+
 ## [0.3.0] - 2025-08-09
 
 ### [0.3.0] - 2025-08-09 - Changed

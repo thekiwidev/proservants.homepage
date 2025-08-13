@@ -1,14 +1,24 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, useMotionValue, type HTMLMotionProps } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValue,
+  type HTMLMotionProps,
+} from "framer-motion";
 
 interface ScrollAnimateProps
   extends Omit<HTMLMotionProps<"div">, "style" | "children" | "ref"> {
   children: React.ReactNode;
 }
 
-export function ScrollAnimate({ children, className, ...props }: ScrollAnimateProps) {
+export function ScrollAnimate({
+  children,
+  className,
+  ...props
+}: ScrollAnimateProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -38,4 +48,3 @@ export function ScrollAnimate({ children, className, ...props }: ScrollAnimatePr
     </motion.div>
   );
 }
-
