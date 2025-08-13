@@ -12,13 +12,13 @@ import { cn } from "@/lib/utils";
 interface ScrollAnimateProps
   extends Omit<HTMLMotionProps<"div">, "style" | "children" | "ref"> {
   direction?: "left" | "right" | "none";
-  type: "image" | "text";
+  type?: "image" | "text";
   children: React.ReactNode;
 }
 
 export function ScrollAnimate({
   direction = "none",
-  type,
+  type = "text",
   className,
   children,
   ...props
