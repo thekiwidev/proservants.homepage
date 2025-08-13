@@ -26,7 +26,7 @@ export function ScrollAnimate({
   const ref = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ["start end", "center 60%"],
   });
 
   const progress = useTransform(scrollYProgress, (v) => v);

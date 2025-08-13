@@ -1,5 +1,4 @@
-MigranX Website (Next.js)
-=========================
+# MigranX Website (Next.js)
 
 Production-ready marketing website for MigranX, built with Next.js App Router, Tailwind CSS v4, and React 19. It showcases the product value, links to mobile apps, and includes briefs for future pages (Homepage, Sellers, Drivers) to guide content and design.
 
@@ -24,9 +23,9 @@ Scripts
 Quick start
 —
 
-1) bun install
-2) bun dev
-3) Open <http://localhost:3000>
+1. bun install
+2. bun dev
+3. Open <http://localhost:3000>
 
 File structure (key paths)
 —
@@ -83,4 +82,3 @@ Notes
 - Shared UI comes from components/ui and components/shared; prefer these over custom-styled HTML.
 - Animations use Framer Motion; see lib/animations.ts and the ScrollAnimate component.
 - Color/theme tokens are defined in app/globals.css (Tailwind v4 utilities layered).
-
