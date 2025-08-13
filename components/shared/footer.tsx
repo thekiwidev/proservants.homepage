@@ -31,7 +31,10 @@ export function Footer({ className }: FooterProps) {
   };
 
   return (
-    <footer className={cn("bg-dark-900 text-white", className)}>
+    <footer
+      data-no-animate
+      className={cn("bg-dark-900 text-white animate-none", className)}
+    >
       <Container size="xl">
         <div className="py-16">
           {/* Main footer content */}
